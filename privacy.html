@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — BrownFamily Apps</title>
+<meta name="description" content="We do not collect personal data. No ads. No analytics.">
+<link rel="canonical" href="https://www.brownfamilyapps.com/privacy.html">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="container nav"><a class="logo" href="/"><span class="logo-badge">B</span><strong>BrownFamily&nbsp;Apps</strong></a><nav class="small"><a class="btn" href="/">Home</a></nav></header>
+  <main class="container">
+    <h1>Privacy Policy</h1>
+    <p><strong>Effective:</strong> <span id="d"></span></p>
+    <p>We design our apps to collect <strong>no personal information</strong>. We do not use third‑party analytics or advertising SDKs. We do not sell or share data with anyone.</p>
+    <h2>What we don’t do</h2>
+    <ul>
+      <li>No advertising, ad identifiers, or tracking pixels.</li>
+      <li>No fingerprinting or cross‑app/device tracking.</li>
+      <li>No crash reporters that send device/usage data to third parties.</li>
+    </ul>
+    <h2>What may be stored</h2>
+    <p>Your content (like photos and notes) is stored locally on your device. If the app offers export/backup, it uses your chosen destination (e.g., your cloud drive) and never our servers.</p>
+    <h2>Contact</h2>
+    <p>If you have questions, email <a href="mailto:privacy@brownfamilyapps.com">privacy@brownfamilyapps.com</a>.</p>
+  </main>
+  <footer class="container footer small">© <span id="y"></span> BrownFamily Apps</footer>
+  <script>
+    const now = new Date();
+    document.getElementById('y').textContent = now.getFullYear();
+    document.getElementById('d').textContent = now.toISOString().slice(0,10);
+  </script>
+</body>
+</html>

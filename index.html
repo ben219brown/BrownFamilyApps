@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BrownFamily Apps — Privacy‑first mobile apps (no ads, no tracking)</title>
+<meta name="description" content="BrownFamily Apps builds small, useful mobile apps with zero advertising and zero data collection.">
+<link rel="canonical" href="https://www.brownfamilyapps.com/">
+<meta property="og:title" content="BrownFamily Apps — Privacy‑first mobile apps">
+<meta property="og:description" content="Small, useful, private. No ads. No tracking.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.brownfamilyapps.com/">
+<meta name="theme-color" content="#ff8a3d">
+<link rel="preconnect" href="/" crossorigin>
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="container nav" role="navigation" aria-label="Primary">
+    <a class="logo" href="/" aria-label="BrownFamily Apps home">
+      <span class="logo-badge">B</span>
+      <strong>BrownFamily&nbsp;Apps</strong>
+    </a>
+    <nav class="small" aria-label="Utility">
+      <a class="btn" href="#apps">Apps</a>
+      <a class="btn" href="/privacy.html">Privacy</a>
+      <a class="btn" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="kicker">Privacy‑first</div>
+      <h1>Useful mobile apps. <br>Zero ads. Zero tracking.</h1>
+      <p class="sub">We’re a small family studio building focused tools that respect your time and your privacy. No advertising SDKs. No analytics beacons. No selling data—ever.</p>
+      <div class="cta">
+        <a class="button primary" href="#apps">See our apps</a>
+        <a class="button" href="/privacy.html">Read our privacy policy</a>
+      </div>
+    </section>
+
+    <section id="apps" aria-labelledby="apps-title">
+      <h2 id="apps-title" class="section-title">Our apps</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="badge">iOS & Android</div>
+          <h3>Eggsy — egg counting made easy</h3>
+          <p>Track daily egg production, flock totals, and trends with a couple of taps. Designed for backyard chicken keepers and small farms.</p>
+          <img class="app-shot" src="assets/eggsy_placeholder.svg" alt="Eggsy app graphic">
+          <div class="cta" style="margin-top:10px">
+            <a class="button" href="#" aria-label="Eggsy on the App Store (link placeholder)">App Store</a>
+            <a class="button" href="#" aria-label="Eggsy on Google Play (link placeholder)">Google Play</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="badge">iOS & Android</div>
+          <h3>JobSnapApp — contractor photo catalog</h3>
+          <p>Capture, organize, and share job‑site photos fast. Auto‑titles, tags, and client folders keep your project history tidy.</p>
+          <img class="app-shot" src="assets/JSA_White_PNG.png" alt="JobSnapApp logo">
+          <div class="cta" style="margin-top:10px">
+            <a class="button" href="https://www.jobsnapapp.com" rel="noopener">Visit JobSnapApp.com</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cards-2">
+      <article class="card">
+        <h3>What “no data collection” really means</h3>
+        <p>Our apps do not include third‑party analytics, crash reporters, ads, or tracking pixels. We don’t build user profiles, and we do not sell or share any personal data. Where settings sync or backups are offered, they live on your device or in your own cloud account.</p>
+        <ul class="small">
+          <li>No ad SDKs or fingerprinting</li>
+          <li>No device‑level tracking or cross‑app IDs</li>
+          <li>All permissions are strictly opt‑in and only when needed</li>
+        </ul>
+      </article>
+      <aside class="card" id="contact">
+        <h3>Contact</h3>
+        <p class="small">Questions, support, or feedback? Email us anytime.</p>
+        <p><a class="button" href="mailto:hello@brownfamilyapps.com">hello@brownfamilyapps.com</a></p>
+        <p class="small">Business inquiries welcome.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="container footer small">
+    <div>© <span id="y"></span> BrownFamily Apps • <a href="/privacy.html">Privacy</a></div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>
