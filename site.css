@@ -89,3 +89,13 @@ h1 span{color:var(--orange)}
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;gap:45px;padding-top:72px}.product-card{grid-template-columns:1fr}.product-visual{min-height:420px}.principle-grid{grid-template-columns:1fr}.privacy-inner,.contact{grid-template-columns:1fr;align-items:start}.jobsnap-visual{min-height:480px}}
 @media(max-width:700px){.shell{width:min(100% - 28px,1180px)}.nav-wrap{height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:14px;right:14px;padding:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;flex-direction:column;align-items:stretch;gap:8px}.nav-links.open{display:flex}.nav-links a{padding:9px 8px}.nav-contact{text-align:center}.hero{padding:58px 0 64px}.hero-card{transform:none}.product-copy{padding:28px}.product-title-row h3{font-size:2rem}.product-visual{min-height:320px}.apps-section,.principles,.contact{padding-block:72px}.privacy-callout{padding-block:66px}.footer-inner{grid-template-columns:1fr}.footer-inner nav{margin-top:8px}.footer-inner>p{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+
+/* JobSnapApp uses the actual branding and promotional art from JobSnapApp.com. */
+.jobsnap-mini-logo{width:48px;height:48px;object-fit:contain;border-radius:10px;background:#fff;padding:4px}
+.jobsnap-brand-logo{width:96px!important;height:72px!important;object-fit:contain!important;border-radius:12px!important;background:#fff;padding:6px}
+.jobsnap-real-visual{display:flex;align-items:center;justify-content:center;padding:30px;background:radial-gradient(circle at 75% 20%,rgba(43,136,255,.32),transparent 40%),radial-gradient(circle at 10% 80%,rgba(34,199,184,.2),transparent 45%),#10213b;text-decoration:none;min-height:100%;overflow:hidden}
+.jobsnap-hero-image{width:100%;height:100%;max-height:500px;object-fit:contain;object-position:center;filter:drop-shadow(0 24px 40px rgba(0,0,0,.3));transition:transform .22s ease}
+.jobsnap-real-visual:hover .jobsnap-hero-image{transform:scale(1.02)}
+@media(max-width:900px){.jobsnap-real-visual{min-height:460px}.jobsnap-hero-image{max-height:430px}}
+@media(max-width:700px){.jobsnap-brand-logo{width:82px!important;height:62px!important}.jobsnap-real-visual{min-height:360px;padding:20px}.jobsnap-hero-image{max-height:340px}}
