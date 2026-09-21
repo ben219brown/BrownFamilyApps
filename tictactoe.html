@@ -23,6 +23,10 @@
     .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
     .feature-grid article{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;min-height:220px}.feature-grid h3{font-size:1.45rem}.feature-grid p{color:var(--muted)}
     .story{padding:92px 0;display:grid;grid-template-columns:.8fr 1.2fr;gap:58px;align-items:start}.story h2{font-size:clamp(2.5rem,5vw,4.5rem)}.story p{color:#d9c6bb;font-size:1.08rem}
+    .gameplay{padding:88px 0;background:#050505;border-block:1px solid rgba(255,255,255,.08)}
+    .gameplay .section-heading{margin-bottom:30px}
+    .gameplay .section-heading p{color:#d9c6bb}
+    .gameplay-shot{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;object-position:center;border-radius:24px;box-shadow:0 28px 70px rgba(0,0,0,.45);background:#000}
     .cta{padding:80px 0 100px;text-align:center}.cta h2{font-size:clamp(2.5rem,5vw,4.3rem);max-width:850px;margin:0 auto 18px}.cta p{color:#d9c6bb}
     .button.game{background:#ff8a25;color:#210803;box-shadow:0 14px 32px rgba(255,138,37,.22)}
     .button.ghost{border-color:#6b3025;background:#2a100d;color:#fff}
@@ -54,6 +58,7 @@
     </div>
   </div></section>
   <section class="story shell"><div><p class="eyebrow" style="color:#ff9c45">Why it exists</p><h2>Inspired by the games we played while waiting for dinner.</h2></div><p>Tic-Tac-Toe started with a very ordinary family moment: searching for room on a paper placemat and sharing whatever crayon was still usable. The app keeps that experience uncomplicated — a familiar game meant to be played with someone sitting right there with you.</p></section>
+  <section class="gameplay"><div class="shell"><div class="section-heading compact"><p class="eyebrow" style="color:#ff9c45">Actual gameplay</p><h2>Simple board. Persistent score. Clear turns.</h2><p>This is the game itself — not a mockup.</p></div><img class="gameplay-shot" src="/assets/apps/tictactoe-game-landscape.webp" alt="Tic-Tac-Toe gameplay showing Player O, ties, Player X, the current turn, reset control, and the game board"></div></section>
   <section class="cta shell"><h2>A classic game without modern digital annoyances.</h2><p>Available now for Android.</p><a class="button game" href="https://play.google.com/store/apps/details?id=com.jobsnapapp.tictactoe" target="_blank" rel="noopener">View on Google Play ↗</a></section>
 </main>
 <footer class="site-footer"><div class="shell footer-inner"><div><strong>Brown Family Apps</strong><span>Practical software, built with care.</span></div><nav><a href="/">All apps</a><a href="/privacy.html">Privacy</a><a href="mailto:brownfamilyapps219@gmail.com">Contact</a></nav><p>© <span id="year"></span> Brown Family Apps</p></div></footer>
