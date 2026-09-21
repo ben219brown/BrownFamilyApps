@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.brownfamilyapps.com/</loc><priority>1.0</priority></url>
   <url><loc>https://www.brownfamilyapps.com/eggsy/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.brownfamilyapps.com/tictactoe.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.brownfamilyapps.com/serviceall.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.brownfamilyapps.com/homesteader.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.brownfamilyapps.com/void-ascendant.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.brownfamilyapps.com/privacy.html</loc><priority>0.6</priority></url>
   <url><loc>https://www.brownfamilyapps.com/account-deletion.html</loc><priority>0.5</priority></url>
 </urlset>
