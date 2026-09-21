@@ -20,24 +20,26 @@
     img{max-width:100%;height:auto}
 
     /* Homepage portfolio window: use real app imagery without cropping titles. */
-    .hero-card-content{gap:11px;padding:22px}
-    .hero-card .mini-app{padding:12px 14px}
-    .hero-card .mini-app img{object-fit:contain}
+    .hero-card-content{gap:7px;padding:17px 20px}
+    .hero-card .mini-app{padding:8px 12px;min-height:54px}
+    .hero-card .mini-app img{width:44px;height:44px;object-fit:contain}
+    .hero-card .mini-app strong{font-size:.93rem}
+    .hero-card .mini-app small{font-size:.74rem}
     .hero-card .mini-app .mini-screen{
-      width:52px;height:54px;border-radius:10px;object-fit:contain;object-position:center;
-      background:#08111f;padding:2px;box-shadow:0 5px 15px rgba(0,0,0,.18)
+      width:44px;height:44px;border-radius:9px;object-fit:contain;object-position:center;
+      background:#08111f;padding:1px;box-shadow:0 5px 15px rgba(0,0,0,.18)
     }
     .hero-card .mini-app .homestead-thumb{background:#171717}
     .jobsnap-mini-logo{
       background:transparent!important;padding:0!important;object-fit:contain!important;
-      width:52px!important;height:52px!important;border-radius:10px!important
+      width:44px!important;height:44px!important;border-radius:9px!important
     }
     .jobsnap-brand-logo{
       background:transparent!important;padding:0!important;
       width:78px!important;height:68px!important;object-fit:contain!important;border-radius:14px!important
     }
-    .hero-card .studio-note.portfolio-note{margin-top:1px;padding:11px 14px}
-    .hero-card .studio-note.portfolio-note p{font-size:.86rem}
+    .hero-card .studio-note.portfolio-note{margin-top:1px;padding:8px 12px}
+    .hero-card .studio-note.portfolio-note p{font-size:.78rem}
     .homesteader-screen-visual{
       min-height:100%;display:flex;align-items:center;justify-content:center;padding:28px;
       background:linear-gradient(145deg,#dce8cf,#f4e3b9);text-decoration:none;overflow:hidden
@@ -79,17 +81,18 @@
     .serviceall-card .feature-pills li{background:rgba(15,39,66,.92);border-color:rgba(76,180,232,.2);color:#d9effc}
     .serviceall-card .button.serviceall-button{background:#ffae13;color:#08121e;border-color:#ffae13;box-shadow:0 10px 28px rgba(255,174,19,.18)}
     .serviceall-card .button.serviceall-button:hover{background:#ffc045;border-color:#ffc045}
-    .serviceall-visual{min-height:420px;display:flex;align-items:center;justify-content:center;position:relative;padding:28px;text-decoration:none;overflow:hidden}
-    .serviceall-visual::before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(0,190,255,.18),rgba(0,190,255,.04) 44%,transparent 68%);filter:blur(2px)}
-    .serviceall-screen{position:relative;z-index:1;width:min(100%,330px);max-height:470px;object-fit:contain;filter:drop-shadow(0 24px 42px rgba(0,0,0,.52));transition:transform .25s ease}
-    .serviceall-visual:hover .serviceall-screen{transform:translateY(-5px) scale(1.015)}
+    .serviceall-visual{min-height:380px;display:flex;align-items:center;justify-content:center;position:relative;padding:22px;text-decoration:none;overflow:hidden;background:#07111f}
+    .serviceall-hero-image{position:relative;z-index:1;width:100%;height:auto;max-height:470px;object-fit:contain;object-position:center;border-radius:18px;box-shadow:0 22px 48px rgba(0,0,0,.34);transition:transform .25s ease}
+    .serviceall-visual:hover .serviceall-hero-image{transform:translateY(-4px) scale(1.008)}
 
     .app-icon-visual{display:flex;align-items:center;justify-content:center;min-height:100%;padding:46px;text-decoration:none}
     .app-icon-art{width:min(76%,360px);height:auto!important;object-fit:contain!important;border-radius:30px;filter:drop-shadow(0 24px 38px rgba(17,24,39,.2));transition:transform .22s ease}
     .app-icon-visual:hover .app-icon-art{transform:translateY(-4px) scale(1.015)}
 
     .tictactoe-card{background:#fff8f3;border:1px solid #f3ded2}
-    .tictactoe-visual{background:radial-gradient(circle at 50% 42%,#6e1b12,#2a0c09 62%,#160706 100%)}
+    .tictactoe-visual{background:#050505;display:flex;align-items:center;justify-content:center;padding:20px;text-decoration:none;overflow:hidden}
+    .tictactoe-game-shot{width:100%;height:auto;max-height:450px;object-fit:contain;object-position:center;border-radius:16px;box-shadow:0 20px 42px rgba(0,0,0,.26);transition:transform .22s ease}
+    .tictactoe-visual:hover .tictactoe-game-shot{transform:translateY(-4px) scale(1.006)}
 
     .homesteader-card{background:#fbf8ec;border:1px solid #e9e2c9}
     .homesteader-card .product-tagline{color:#47704a}
@@ -106,8 +109,10 @@
     @media(max-width:760px){
       .portfolio-group{align-items:flex-start;flex-direction:column;gap:8px}
       .serviceall-card{grid-column:auto}
-      .serviceall-visual{min-height:330px;padding:16px 22px 30px}
-      .serviceall-screen{width:min(82vw,280px);max-height:390px}
+      .serviceall-visual{min-height:260px;padding:12px}
+      .serviceall-hero-image{max-height:340px}
+      .tictactoe-visual{min-height:260px;padding:12px}
+      .tictactoe-game-shot{max-height:330px}
       .app-icon-visual{min-height:330px;padding:30px}
       .app-icon-art{width:min(70vw,300px)}
       .eggsy-card .product-visual{padding:14px;min-height:300px}
@@ -139,9 +144,11 @@
         <div class="hero-card-content">
           <div class="mini-app eggsy-mini"><img src="/eggsy/images/eggsy-app-icon.webp" alt=""><div><strong>Eggsy</strong><small>Backyard flock tracking</small></div></div>
           <div class="mini-app jobsnap-mini"><img class="jobsnap-mini-logo" src="/assets/apps/jobsnap-camera.webp" alt=""><div><strong>JobSnapApp</strong><small>Job-site organization</small></div></div>
-          <div class="mini-app serviceall-mini"><img class="mini-screen" src="/serviceall-app-screen.webp" alt=""><div><strong>ServiceAll</strong><small>Maintenance tracking</small></div></div>
-          <div class="mini-app homesteader-mini"><img class="mini-screen homestead-thumb" src="/assets/apps/homesteader-animals.webp" alt=""><div><strong>Homesteader</strong><small>Animals, garden & homestead records</small></div></div>
-          <div class="studio-note portfolio-note"><span>6</span><p>Three apps in production. Three more in testing.</p></div>
+          <div class="mini-app tictactoe-mini"><img src="/assets/apps/tictactoe-icon.webp" alt=""><div><strong>Tic-Tac-Toe</strong><small>Classic two-player game</small></div></div>
+          <div class="mini-app serviceall-mini"><img src="/serviceall-icon.webp" alt=""><div><strong>ServiceAll</strong><small>Maintenance tracking</small></div></div>
+          <div class="mini-app homesteader-mini"><img class="mini-screen homestead-thumb" src="/assets/apps/homesteader-animals.webp" alt=""><div><strong>Homesteader</strong><small>Homestead records</small></div></div>
+          <div class="mini-app void-mini"><img src="/assets/apps/void-ascendant-icon.webp" alt=""><div><strong>Void Ascendant</strong><small>Idle space progression</small></div></div>
+          <div class="studio-note portfolio-note"><span>3+3</span><p>Three in production · three in testing</p></div>
         </div>
       </div>
     </section>
@@ -188,7 +195,7 @@
               <ul class="feature-pills" aria-label="Tic-Tac-Toe features"><li>Two-player</li><li>No ads</li><li>No data collection</li><li>Light & dark themes</li></ul>
               <div class="card-actions"><a class="button primary" href="/tictactoe.html">Explore Tic-Tac-Toe</a><a class="button text-button" href="https://play.google.com/store/apps/details?id=com.jobsnapapp.tictactoe" target="_blank" rel="noopener">Google Play ↗</a></div>
             </div>
-            <a class="product-visual app-icon-visual tictactoe-visual" href="/tictactoe.html" aria-label="View Tic-Tac-Toe"><img class="app-icon-art" src="/assets/apps/tictactoe-icon.webp" alt="Tic-Tac-Toe glowing game icon"></a>
+            <a class="product-visual tictactoe-visual" href="/tictactoe.html" aria-label="View Tic-Tac-Toe"><img class="tictactoe-game-shot" src="/assets/apps/tictactoe-game-landscape.webp" alt="Tic-Tac-Toe gameplay showing the score, player turn, and game board"></a>
           </article>
 
           <div class="portfolio-group testing"><div><span class="group-label">In testing</span><h3>Coming next</h3></div><p>Active projects being refined before production release. Features, screens, pricing, and timing can still change during testing.</p></div>
@@ -201,7 +208,7 @@
               <ul class="feature-pills dark-pills" aria-label="ServiceAll features"><li>Vehicles & equipment</li><li>Service history</li><li>Maintenance reminders</li><li>Parts & components</li><li>Costs</li><li>Photos & notes</li></ul>
               <div class="card-actions"><a class="button serviceall-button" href="/serviceall.html">Preview ServiceAll</a></div>
             </div>
-            <a class="product-visual serviceall-visual" href="/serviceall.html" aria-label="Preview ServiceAll"><img class="serviceall-screen" src="/serviceall-app-screen.webp" alt="ServiceAll maintenance tracking interface" loading="lazy"></a>
+            <a class="product-visual serviceall-visual" href="/serviceall.html" aria-label="Preview ServiceAll"><img class="serviceall-hero-image" src="/assets/apps/serviceall-hero.webp" alt="ServiceAll promotional graphic showing the ServiceAll name, vehicles and equipment, and maintenance screens" loading="lazy"></a>
           </article>
 
           <article class="product-card homesteader-card">
