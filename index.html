@@ -19,6 +19,36 @@
     body{margin:0}
     img{max-width:100%;height:auto}
 
+    /* Homepage portfolio window: use real app imagery without cropping titles. */
+    .hero-card-content{gap:11px;padding:22px}
+    .hero-card .mini-app{padding:12px 14px}
+    .hero-card .mini-app img{object-fit:contain}
+    .hero-card .mini-app .mini-screen{
+      width:52px;height:54px;border-radius:10px;object-fit:contain;object-position:center;
+      background:#08111f;padding:2px;box-shadow:0 5px 15px rgba(0,0,0,.18)
+    }
+    .hero-card .mini-app .homestead-thumb{background:#171717}
+    .jobsnap-mini-logo{
+      background:transparent!important;padding:0!important;object-fit:contain!important;
+      width:52px!important;height:52px!important;border-radius:10px!important
+    }
+    .jobsnap-brand-logo{
+      background:transparent!important;padding:0!important;
+      width:78px!important;height:68px!important;object-fit:contain!important;border-radius:14px!important
+    }
+    .hero-card .studio-note.portfolio-note{margin-top:1px;padding:11px 14px}
+    .hero-card .studio-note.portfolio-note p{font-size:.86rem}
+    .homesteader-screen-visual{
+      min-height:100%;display:flex;align-items:center;justify-content:center;padding:28px;
+      background:linear-gradient(145deg,#dce8cf,#f4e3b9);text-decoration:none;overflow:hidden
+    }
+    .homesteader-screen{
+      width:min(100%,310px);max-height:470px;height:auto!important;object-fit:contain!important;
+      object-position:center;filter:drop-shadow(0 22px 34px rgba(24,53,31,.22));
+      border-radius:20px;transition:transform .22s ease
+    }
+    .homesteader-screen-visual:hover .homesteader-screen{transform:translateY(-4px) scale(1.01)}
+
     .portfolio-summary{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
     .portfolio-summary span{padding:7px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.78rem;font-weight:850;color:#556276}
     .portfolio-group{display:flex;align-items:end;justify-content:space-between;gap:24px;padding:24px 4px 8px}
@@ -108,11 +138,10 @@
         <div class="window-top"><span></span><span></span><span></span></div>
         <div class="hero-card-content">
           <div class="mini-app eggsy-mini"><img src="/eggsy/images/eggsy-app-icon.webp" alt=""><div><strong>Eggsy</strong><small>Backyard flock tracking</small></div></div>
-          <div class="mini-app jobsnap-mini"><img class="jobsnap-mini-logo" src="https://www.jobsnapapp.com/logo/splash_logo_dark.png" alt=""><div><strong>JobSnapApp</strong><small>Job-site organization</small></div></div>
-          <div class="mini-app serviceall-mini"><img src="/serviceall-icon.webp" alt=""><div><strong>ServiceAll</strong><small>Your maintenance memory</small></div></div>
-          <div class="studio-note"><span>01</span><p>Find a problem worth solving.</p></div>
-          <div class="studio-note"><span>02</span><p>Keep the experience focused.</p></div>
-          <div class="studio-note"><span>03</span><p>Collect only what the feature needs.</p></div>
+          <div class="mini-app jobsnap-mini"><img class="jobsnap-mini-logo" src="/assets/apps/jobsnap-camera.webp" alt=""><div><strong>JobSnapApp</strong><small>Job-site organization</small></div></div>
+          <div class="mini-app serviceall-mini"><img class="mini-screen" src="/serviceall-app-screen.webp" alt=""><div><strong>ServiceAll</strong><small>Maintenance tracking</small></div></div>
+          <div class="mini-app homesteader-mini"><img class="mini-screen homestead-thumb" src="/assets/apps/homesteader-animals.webp" alt=""><div><strong>Homesteader</strong><small>Animals, garden & homestead records</small></div></div>
+          <div class="studio-note portfolio-note"><span>6</span><p>Three apps in production. Three more in testing.</p></div>
         </div>
       </div>
     </section>
@@ -143,7 +172,7 @@
           <article class="product-card jobsnap-card">
             <div class="product-copy">
               <div class="product-topline"><span class="status live">Available now</span><span>Job & field workflow</span></div>
-              <div class="product-title-row"><img class="jobsnap-brand-logo" src="https://www.jobsnapapp.com/logo/splash_logo_dark.png" alt="JobSnapApp logo"><div><h3>JobSnapApp</h3><p class="product-tagline">Keep job-site details organized.</p></div></div>
+              <div class="product-title-row"><img class="jobsnap-brand-logo" src="/assets/apps/jobsnap-camera.webp" alt="JobSnapApp camera logo"><div><h3>JobSnapApp</h3><p class="product-tagline">Keep job-site details organized.</p></div></div>
               <p>Capture and organize job-site photos, manage client details, scheduling, crew time, and backups in a workflow designed for contractors and service businesses.</p>
               <ul class="feature-pills dark-pills" aria-label="JobSnap features"><li>Client records</li><li>Job photos</li><li>Scheduling</li><li>Crew time</li><li>Cloud backup</li></ul>
               <div class="card-actions"><a class="button light" href="https://www.jobsnapapp.com" target="_blank" rel="noopener">Visit JobSnapApp.com ↗</a></div>
@@ -183,7 +212,7 @@
               <ul class="feature-pills" aria-label="Homesteader features"><li>Animal records</li><li>Feed costs</li><li>Health checks</li><li>Garden info</li><li>Expenses</li><li>Notes</li></ul>
               <div class="card-actions"><a class="button primary" href="/homesteader.html">Preview Homesteader</a></div>
             </div>
-            <a class="product-visual app-icon-visual homesteader-visual" href="/homesteader.html" aria-label="View Homesteader"><img class="app-icon-art" src="/assets/apps/homesteader-icon.webp" alt="Homesteader barn and field app icon"></a>
+            <a class="product-visual homesteader-screen-visual" href="/homesteader.html" aria-label="View Homesteader"><img class="homesteader-screen" src="/assets/apps/homesteader-animals.webp" alt="Homesteader Animals screen showing animal groups, individual animals, and navigation"></a>
           </article>
 
           <article class="product-card void-card">
