@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/eggsy-hero.webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
 
   <script type="application/ld+json">
@@ -61,7 +62,7 @@
   <header class="site-header" id="top">
     <div class="nav-wrap">
       <a class="brand" href="/eggsy/" aria-label="Eggsy home">
-        <img src="images/eggsy-app-icon.webp" alt="Eggsy app icon" />
+        <img src="images/eggsy-app-icon.webp" alt="Eggsy app icon" decoding="async" />
         <span>Eggsy</span>
       </a>
       <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
@@ -93,7 +94,7 @@
         </div>
       </div>
       <div class="hero-art">
-        <img src="images/eggsy-hero.webp" alt="Eggsy promotional banner showing egg tracking, flock management and stats" />
+        <img src="images/eggsy-hero.webp" alt="Eggsy promotional banner showing egg tracking, flock management and stats" loading="eager" fetchpriority="high" decoding="async" />
       </div>
     </section>
 
@@ -163,14 +164,14 @@
           <p>Tap any image for a larger view.</p>
         </div>
         <div class="screenshot-grid">
-          <button class="shot" data-full="images/egg-tracking.webp" aria-label="View egg tracking screenshot"><img loading="lazy" src="images/egg-tracking.webp" alt="Eggsy egg tracking, hatch dates and hen records" /></button>
-          <button class="shot" data-full="images/manage-coops.webp" aria-label="View coop management screenshot"><img loading="lazy" src="images/manage-coops.webp" alt="Eggsy multiple coop and flock management" /></button>
-          <button class="shot" data-full="images/stats-history.webp" aria-label="View stats screenshot"><img loading="lazy" src="images/stats-history.webp" alt="Eggsy stats, trends and egg history" /></button>
-          <button class="shot" data-full="images/feed-costs.webp" aria-label="View feed cost screenshot"><img loading="lazy" src="images/feed-costs.webp" alt="Eggsy feed cost and profitability calculator" /></button>
-          <button class="shot" data-full="images/ai-breed-scanner.webp" aria-label="View AI breed scanner screenshot"><img loading="lazy" src="images/ai-breed-scanner.webp" alt="Eggsy AI breed scanner and breed guide" /></button>
-          <button class="shot" data-full="images/favorite-hens.webp" aria-label="View hen management screenshot"><img loading="lazy" src="images/favorite-hens.webp" alt="Eggsy hen profiles and Employee of the Month" /></button>
-          <button class="shot" data-full="images/customize-export.webp" aria-label="View customization and export screenshot"><img loading="lazy" src="images/customize-export.webp" alt="Eggsy font picker and CSV export tools" /></button>
-          <button class="shot" data-full="images/daily-egg-logging.webp" aria-label="View daily egg logging screenshot"><img loading="lazy" src="images/daily-egg-logging.webp" alt="Eggsy simple daily egg logging calendar" /></button>
+          <button class="shot" data-full="images/egg-tracking.webp" aria-label="View egg tracking screenshot"><img loading="lazy" decoding="async" src="images/egg-tracking.webp" alt="Eggsy egg tracking, hatch dates and hen records" /></button>
+          <button class="shot" data-full="images/manage-coops.webp" aria-label="View coop management screenshot"><img loading="lazy" decoding="async" src="images/manage-coops.webp" alt="Eggsy multiple coop and flock management" /></button>
+          <button class="shot" data-full="images/stats-history.webp" aria-label="View stats screenshot"><img loading="lazy" decoding="async" src="images/stats-history.webp" alt="Eggsy stats, trends and egg history" /></button>
+          <button class="shot" data-full="images/feed-costs.webp" aria-label="View feed cost screenshot"><img loading="lazy" decoding="async" src="images/feed-costs.webp" alt="Eggsy feed cost and profitability calculator" /></button>
+          <button class="shot" data-full="images/ai-breed-scanner.webp" aria-label="View AI breed scanner screenshot"><img loading="lazy" decoding="async" src="images/ai-breed-scanner.webp" alt="Eggsy AI breed scanner and breed guide" /></button>
+          <button class="shot" data-full="images/favorite-hens.webp" aria-label="View hen management screenshot"><img loading="lazy" decoding="async" src="images/favorite-hens.webp" alt="Eggsy hen profiles and Employee of the Month" /></button>
+          <button class="shot" data-full="images/customize-export.webp" aria-label="View customization and export screenshot"><img loading="lazy" decoding="async" src="images/customize-export.webp" alt="Eggsy font picker and CSV export tools" /></button>
+          <button class="shot" data-full="images/daily-egg-logging.webp" aria-label="View daily egg logging screenshot"><img loading="lazy" decoding="async" src="images/daily-egg-logging.webp" alt="Eggsy simple daily egg logging calendar" /></button>
         </div>
       </div>
     </section>
@@ -182,7 +183,7 @@
         <p>Whether you keep a few backyard hens or several coops with different birds, Eggsy is designed to make the record keeping useful without making it feel like a chore.</p>
         <a class="text-link" href="https://play.google.com/store/apps/details?id=com.brownfamapps.eggcount" target="_blank" rel="noopener">View Eggsy on Google Play →</a>
       </div>
-      <img class="overview-image" loading="lazy" src="images/feature-overview.webp" alt="Overview of Eggsy features and app screens" />
+      <img class="overview-image" loading="lazy" decoding="async" src="images/feature-overview.webp" alt="Overview of Eggsy features and app screens" />
     </section>
 
     <section class="why" id="why-eggsy">
@@ -202,9 +203,9 @@
     </section>
 
     <section class="section-shell final-cta">
-      <img loading="lazy" src="images/eggsy-banner.webp" alt="Eggsy promotional banner with flock tracking screens" />
+      <img loading="lazy" decoding="async" src="images/eggsy-banner.webp" alt="Eggsy promotional banner with flock tracking screens" />
       <div class="final-cta-copy">
-        <img class="cta-icon" src="images/eggsy-app-icon.webp" alt="" />
+        <img class="cta-icon" src="images/eggsy-app-icon.webp" alt="" loading="lazy" decoding="async" />
         <div>
           <h2>Ready for happier hens and better records?</h2>
           <p>Make daily flock tracking simple with Eggsy.</p>
@@ -216,7 +217,7 @@
 
   <footer>
     <div class="footer-inner">
-      <div class="footer-brand"><img src="images/eggsy-app-icon.webp" alt="" /><strong>Eggsy</strong></div>
+      <div class="footer-brand"><img src="images/eggsy-app-icon.webp" alt="" loading="lazy" decoding="async" /><strong>Eggsy</strong></div>
       <p>Track eggs. Manage flocks. Know your numbers.</p>
       <a href="https://play.google.com/store/apps/details?id=com.brownfamapps.eggcount" target="_blank" rel="noopener">Google Play</a>
     </div>
