@@ -114,7 +114,8 @@
     .void-card .feature-pills li{background:#151932;border-color:#282e55;color:#dfe4fb}
     .void-card .button.void-button{background:linear-gradient(90deg,#db4141,#7657e9);color:#fff;box-shadow:0 10px 30px rgba(118,87,233,.22)}
     .void-visual{background:radial-gradient(circle at 50% 42%,#24164d,#0d0f27 58%,#070815 100%)}
-    .void-visual .app-icon-art{filter:drop-shadow(0 24px 42px rgba(0,0,0,.55))}
+    .void-card .void-visual{min-width:0;min-height:0;padding:24px;display:flex;align-items:center;justify-content:center}
+    .void-card .void-feature-art{display:block;width:100%;height:auto;object-fit:contain;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
 
     @media(max-width:760px){
       .portfolio-group{align-items:flex-start;flex-direction:column;gap:8px}
@@ -240,7 +241,7 @@
               <ul class="feature-pills dark-pills" aria-label="Void Ascendant features"><li>Sector combat</li><li>Idle progression</li><li>Weapon upgrades</li><li>Resources</li><li>Long-term growth</li></ul>
               <div class="card-actions"><a class="button void-button" href="/void-ascendant.html">Preview Void Ascendant</a></div>
             </div>
-            <a class="product-visual app-icon-visual void-visual" href="/void-ascendant.html" aria-label="View Void Ascendant"><img class="app-icon-art" src="/assets/apps/void-ascendant-icon.webp" alt="Void Ascendant science-fiction app icon"></a>
+            <a class="product-visual app-icon-visual void-visual" href="/void-ascendant.html" aria-label="View Void Ascendant"><img class="void-feature-art" src="/assets/apps/void-ascendant-feature.png" width="1024" height="500" loading="lazy" alt="Void Ascendant feature artwork with a spacecraft, planets, and a blue and purple cosmic sky"></a>
           </article>
         </div>
       </div>
