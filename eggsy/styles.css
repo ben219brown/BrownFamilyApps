@@ -273,3 +273,15 @@ footer { padding: 28px 0 40px; border-top: 1px solid var(--line); background: #f
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
 footer a{color:#087eae;text-decoration:none;font-weight:800}
+
+/* Eggsy: clear one-time pricing note */
+.hero-price-note{
+  width:fit-content;max-width:100%;display:flex;gap:7px 10px;flex-wrap:wrap;
+  align-items:baseline;justify-content:center;margin:18px auto 0;
+  background:#fff;border:1px solid rgba(23,134,61,.2);border-radius:15px;
+  padding:12px 18px;color:#516452;box-shadow:0 7px 24px rgba(33,86,50,.055);
+  font-size:.91rem
+}
+.hero-price-note strong{color:#207742;font-weight:900}
+.hero-price-note a{color:#087eae;text-underline-offset:3px;font-weight:850}
+.eggsy-cta-price{margin:9px 0 0!important;font-weight:800;color:#31644c!important;font-size:.89rem}
