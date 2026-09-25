@@ -743,6 +743,17 @@
 @media(max-width:620px){.hero.hero-refreshed{padding:56px 0 36px}.hero-refreshed .hero-copy{text-align:left}.hero-refreshed .hero-copy h1{margin:18px 0}.hero-refreshed .hero-copy>p{margin:0 0 23px}.hero-refreshed .hero-actions,.hero-refreshed .hero-points{justify-content:flex-start}.hero-refreshed .kicker{margin:0}.hero-refreshed .hero-points{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.hero-refreshed .serviceall-feature{border-radius:12px}.showcase-grid,.benefits-grid{grid-template-columns:1fr}.showcase-card{max-width:450px;margin-inline:auto}.gallery-section{padding:32px 0 52px}.band-callout{padding:24px;margin-top:42px}.real-screens{padding:52px 0}.benefits-section{padding:56px 0}.benefit{padding:22px}}
 @media(prefers-reduced-motion:reduce){.showcase-card{transition:none}}
 
+/* ServiceAll: planned one-time price and ad-free promise */
+.launch-price-note{width:fit-content;max-width:100%;margin:19px auto 0;padding:12px 17px;
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:6px 10px;
+  border-radius:14px;border:1px solid rgba(83,208,251,.3);background:rgba(83,208,251,.075);
+  color:#c1dbea;font-size:.9rem;line-height:1.5}
+.launch-price-note strong{color:#86e6fc}
+.launch-price-note a{color:#9eeaff;font-weight:800;text-underline-offset:4px}
+.serviceall-price-footnote{display:block;margin-top:8px;color:#b8d9e9;font-size:.9rem;font-weight:700}
+@media(max-width:620px){.launch-price-note{justify-content:flex-start;text-align:left}}
+
+
 </style>
 
   <script type="application/ld+json">
@@ -787,6 +798,9 @@
       <h1>All your equipment.<br><span>One garage.</span></h1>
       <p>Your trucks, tractors, motorcycles, mowers and tools all need attention. ServiceAll helps you remember what you did, what it cost and what needs doing next—without juggling notebooks and receipts.</p>
       <div class="hero-actions"><a class="button button-primary" href="#screens">See the real app <span aria-hidden="true">→</span></a><a class="button button-secondary" href="#features">Explore features</a></div>
+      <div class="launch-price-note" aria-label="Planned ServiceAll pricing">
+        <strong>Planned: $0.99 one-time</strong><span>No ads. No subscription.</span><a href="/#our-promise">Why we charge a little &rarr;</a>
+      </div>
       <div class="hero-points" aria-label="ServiceAll highlights"><span><i>✓</i> Vehicles & equipment</span><span><i>✓</i> Service & repair costs</span><span><i>✓</i> Maintenance reminders</span><span><i>✓</i> Parts, photos & receipts</span></div>
     </div>
     <div class="serviceall-feature"><img src="/assets/serviceall/feature-banner.webp" width="1440" height="703" alt="ServiceAll feature graphic showing garage, service history, equipment photos and maintenance tracking" loading="eager" fetchpriority="high" decoding="async"></div>
@@ -824,7 +838,7 @@
   <div class="asset-row" aria-label="Examples of equipment types"><span>Trucks & cars</span><span>Tractors</span><span>Lawn mowers</span><span>ATVs & UTVs</span><span>Motorcycles</span><span>Shop equipment</span><span>Tools</span></div>
 </div></section>
 <section class="final-cta"><div class="shell cta">
-  <div><div class="eyebrow">ServiceAll by Brown Family Apps</div><h2>Keep your stuff running.</h2><p>ServiceAll is being refined for Android. Questions, feedback or want to hear about availability? Get in touch with Brown Family Apps.</p></div>
+  <div><div class="eyebrow">ServiceAll by Brown Family Apps</div><h2>Keep your stuff running.</h2><p>ServiceAll is being refined for Android. Questions, feedback or want to hear about availability? Get in touch with Brown Family Apps.</p><span class="serviceall-price-footnote">Planned at launch: $0.99 one-time · No ads.</span></div>
   <div class="cta-actions"><a class="button button-primary" href="mailto:brownfamilyapps219@gmail.com?subject=ServiceAll%20availability">Ask about ServiceAll</a><a class="button button-secondary" href="/">See our other apps</a></div>
 </div></section>
 </main>
@@ -837,6 +851,7 @@
       </div>
       <div class="footer-links">
         <a href="/">Brown Family Apps</a>
+        <a href="/#our-promise">Our promise</a>
         <a href="/privacy.html">Privacy</a>
         <a href="mailto:brownfamilyapps219@gmail.com">Contact</a>
       </div>
