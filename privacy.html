@@ -3,111 +3,189 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Privacy Policy — Brown Family Apps</title>
-  <meta name="description" content="Brown Family Apps privacy policy, including app data practices, Firebase Crashlytics, purchases, JobSnap, Eggsy, and account deletion.">
-  <link rel="canonical" href="https://www.brownfamilyapps.com/privacy.html">
+  <title>Privacy Policy for All Six Apps | Brown Family Apps</title>
+  <meta name="description" content="Privacy policy for Brown Family Apps, including Eggsy, JobSnapApp, Tic-Tac-Toe, ServiceAll, Homesteader and Void Ascendant: local records, diagnostics, purchases, backups and deletion.">
+  <link rel="canonical" href="https://brownfamilyapps.com/privacy.html">
   <meta name="theme-color" content="#111827">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy | Brown Family Apps">
+  <meta property="og:description" content="Understand how each of our six apps handles app records, optional online services, diagnostics, purchases, backups and deletion.">
+  <meta property="og:url" content="https://brownfamilyapps.com/privacy.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/site.css?v=20260914-2">
+  <link rel="stylesheet" href="/site.css?v=20260925-privacy">
   <style>
-    .policy-wrap{width:min(880px,calc(100% - 40px));margin:0 auto;padding:78px 0 100px}.policy-wrap h1{font-size:clamp(3rem,7vw,5rem)}.policy-wrap h2{font-size:1.8rem;margin:48px 0 12px;letter-spacing:-.03em}.policy-wrap h3{font-size:1.18rem;margin:28px 0 8px;letter-spacing:-.02em}.policy-wrap p,.policy-wrap li{color:#4f5c70}.policy-wrap li+li{margin-top:8px}.policy-meta{padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:14px;color:#586477;margin:24px 0 38px}.policy-note{padding:20px 22px;border-radius:18px;background:#fff7ed;border:1px solid #fed7aa}.policy-card{margin:18px 0;padding:24px;border-radius:20px;background:#fff;border:1px solid var(--line)}.policy-card h3{margin-top:0}.policy-table{width:100%;border-collapse:collapse;margin-top:15px}.policy-table th,.policy-table td{text-align:left;vertical-align:top;padding:12px 10px;border-top:1px solid var(--line);font-size:.93rem}.policy-table th{width:26%;color:#1f2937}.policy-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+    .policy-wrap{width:min(970px,calc(100% - 40px));margin:0 auto;padding:70px 0 96px}
+    .policy-wrap h1{font-size:clamp(2.8rem,6.5vw,4.8rem);line-height:1.09;letter-spacing:-.052em}
+    .policy-wrap h2{font-size:clamp(1.65rem,3vw,2rem);margin:50px 0 14px;letter-spacing:-.035em;scroll-margin-top:96px}
+    .policy-wrap h3{font-size:1.16rem;margin:25px 0 8px;letter-spacing:-.025em}
+    .policy-wrap p,.policy-wrap li,.policy-wrap td{color:#4f5c70}
+    .policy-wrap li+li{margin-top:9px}
+    .policy-wrap a:not(.button){color:#145a9d;text-decoration-thickness:1px;text-underline-offset:3px}
+    .policy-wrap a:not(.button):focus-visible{outline:3px solid #ffab40;outline-offset:3px}
+    .policy-meta{padding:15px 19px;background:#fff;border:1px solid var(--line);border-radius:14px;color:#526075;margin:24px 0 34px}
+    .policy-note{padding:20px 22px;border-radius:18px;background:#fff7ed;border:1px solid #f7cc9c;margin:21px 0}
+    .policy-note p{margin:7px 0 0}
+    .policy-card{margin:18px 0;padding:26px 30px;border-radius:21px;background:#fff;border:1px solid var(--line);scroll-margin-top:96px}
+    .policy-card h2{margin:0 0 14px}
+    .policy-card h3:first-of-type{margin-top:16px}
+    .policy-card>:last-child{margin-bottom:0}
+    .policy-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:25px 0 35px}
+    .policy-links a{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:14px 16px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:13px;font-weight:800;color:#273648!important}
+    .policy-links a:hover{border-color:#e89f66;background:#fffaf5}
+    .policy-links a span{font-size:.8em;color:#757e8c;font-weight:600}
+    .status-note{color:#536277;font-size:.87rem;margin:-6px 0 14px}
+    .policy-table{width:100%;border-collapse:collapse;margin-top:16px}
+    .policy-table th,.policy-table td{text-align:left;vertical-align:top;padding:12px 10px;border-top:1px solid var(--line);font-size:.95rem}
+    .policy-table th{width:28%;color:#1f2937}
+    .policy-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:32px}
+    .policy-small{font-size:.91rem}
+    @media(max-width:750px){.policy-links{grid-template-columns:repeat(2,minmax(0,1fr))}.policy-card{padding:22px}.policy-table th,.policy-table td{display:block;width:100%;padding:8px 4px}.policy-table th{padding-top:14px}.policy-table td{border-top:0;padding-top:0}}
+    @media(max-width:490px){.policy-links{grid-template-columns:1fr}.policy-wrap{padding-top:53px}.policy-wrap h1{font-size:clamp(2.65rem,12vw,3.6rem)}}
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="shell nav-wrap">
       <a class="brand" href="/"><span class="brand-mark">BFA</span><span>Brown Family Apps</span></a>
-      <nav class="nav-links" style="display:flex"><a href="/">Home</a><a href="/eggsy/">Eggsy</a><a class="nav-contact" href="mailto:brownfamilyapps219@gmail.com">Contact</a></nav>
+      <nav class="nav-links" style="display:flex"><a href="/">Home</a><a href="/account-deletion.html">Data deletion</a><a class="nav-contact" href="mailto:brownfamilyapps219@gmail.com">Contact</a></nav>
     </div>
   </header>
 
   <main class="policy-wrap">
-    <p class="eyebrow">Privacy</p>
+    <p class="eyebrow">Your data · Our responsibility</p>
     <h1>Privacy Policy</h1>
-    <div class="policy-meta"><strong>Last updated:</strong> September 14, 2026</div>
+    <div class="policy-meta"><strong>Last updated:</strong> September 25, 2026 <span aria-hidden="true">·</span> <strong>Developer:</strong> Brown Family Apps</div>
 
-    <p>Brown Family Apps builds mobile applications and websites with a data-minimization approach. We do not sell personal information, rent user data, or build advertising profiles from your use of our apps. We use information only when it is needed to provide a requested feature, maintain an account, process a purchase, protect the service, or diagnose technical problems.</p>
+    <p>This policy describes how Brown Family Apps handles information in its website and six apps: <strong>Eggsy</strong>, <strong>JobSnapApp</strong>, <strong>Tic-Tac-Toe</strong>, <strong>ServiceAll</strong>, <strong>Homesteader</strong>, and <strong>Void Ascendant</strong>. Some apps are available now and others are still being developed or tested. Practices depend on the app version and on the features you use.</p>
+    <p>We design our products to collect only information needed for app functionality, relevant diagnostics, requested online features, purchases and support. We do not sell or rent personal information or use app records to create advertising profiles. Keeping records <em>on your device</em> is different from using an optional third-party service: the app-specific details below explain that distinction.</p>
 
-    <div class="policy-note"><strong>Important:</strong> Data practices can differ by app because different features require different services. The app-specific sections below describe those differences. If an app presents an in-app disclosure for a feature, that disclosure should be read together with this policy.</div>
+    <div class="policy-note"><strong>Important distinction</strong><p>Local records generally remain on your device unless you choose an export, backup, share or online feature. An app store, crash reporting service, authentication provider, AI provider or gaming service may independently process technical, account or transaction information when that service is used. Not every service applies to every app.</p></div>
 
-    <h2>1. BrownFamilyApps.com</h2>
-    <p>We do not intentionally use advertising trackers or behavioral analytics on brownfamilyapps.com. The website may be hosted by a third-party hosting provider, which can process standard technical request information such as IP addresses, browser details, and server logs for hosting, security, abuse prevention, and reliability.</p>
+    <h2>Privacy by app</h2>
+    <nav class="policy-links" aria-label="Jump to each app's privacy information">
+      <a href="#eggsy">Eggsy <span>↗</span></a>
+      <a href="#jobsnapapp">JobSnapApp <span>↗</span></a>
+      <a href="#tictactoe">Tic-Tac-Toe <span>↗</span></a>
+      <a href="#serviceall">ServiceAll <span>↗</span></a>
+      <a href="#homesteader">Homesteader <span>↗</span></a>
+      <a href="#void-ascendant">Void Ascendant <span>↗</span></a>
+    </nav>
 
-    <h2>2. Information our apps may process</h2>
-    <p>Depending on the app and the features you choose to use, our apps may process the following categories of information:</p>
+    <h2 id="website">1. Our website</h2>
+    <p>We do not intentionally use advertising trackers or behavioral advertising analytics on brownfamilyapps.com. Our website hosting provider and services used to load site resources may process routine technical requests, such as IP addresses, browser information and server logs, to deliver and secure the website. Emailing us opens your own email service; any information you send will be used to respond to your inquiry or fulfill your request.</p>
+
+    <h2 id="data-categories">2. Types of information handled</h2>
+    <p>The following categories apply <strong>only where a particular app or feature uses them</strong>:</p>
     <ul>
-      <li><strong>App content you create:</strong> records, notes, photos, dates, flock information, job or client information, settings, and similar content entered into an app.</li>
-      <li><strong>Account information:</strong> an email address or authentication identifier when an app requires sign-in.</li>
-      <li><strong>Files you choose to export or back up:</strong> data is sent only to the destination or provider you choose, such as a file share target or your own cloud storage.</li>
-      <li><strong>Diagnostics:</strong> crash reports and technical device/app information when Firebase Crashlytics is enabled.</li>
-      <li><strong>Purchase information:</strong> product identifiers, purchase status, transaction/order identifiers, or entitlement status needed to validate an in-app purchase or subscription. Payment-card details are handled by the app store/payment provider, not Brown Family Apps.</li>
+      <li><strong>Information you enter:</strong> maintenance records, equipment details, photos, notes, hen and flock information, client/job records, homestead records, gameplay progress and app preferences.</li>
+      <li><strong>Photos, camera and files:</strong> images or files you select or capture to support an app feature; a chosen export or share destination receives the content you elect to send.</li>
+      <li><strong>Accounts and gaming identity:</strong> sign-in information or identifiers processed through optional Google, Firebase or Google Play Games integrations, where included.</li>
+      <li><strong>Technical information:</strong> app/device versions, crash diagnostics and identifiers if a release integrates diagnostics or another disclosed online service.</li>
+      <li><strong>Purchases:</strong> purchase/entitlement status and identifiers for apps or features that use Google Play Billing. The payment provider handles payment-card information.</li>
+      <li><strong>Support messages:</strong> the contact details and information you choose to send when requesting help.</li>
     </ul>
+    <p>A feature described as <em>planned</em> on a product page is not automatically active. We will update this policy as app versions and service integrations change.</p>
 
-    <h2>3. Firebase Crashlytics and diagnostics</h2>
-    <p>We use, or may add, Google Firebase Crashlytics to our apps to identify crashes and improve reliability. Crashlytics can automatically collect crash stack traces, relevant application state, device and operating-system metadata, Crashlytics installation identifiers, Firebase installation identifiers, and similar technical information associated with a crash.</p>
-    <p>We use crash information for debugging and stability, not for advertising. Our intent is not to place user-entered content, names, email addresses, photos, or other sensitive information into custom crash-report fields. Where technically practical, we may provide an in-app setting for diagnostic reporting.</p>
-    <p>Google describes Firebase and Crashlytics data handling at <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>.</p>
+    <h2>3. App-specific details</h2>
 
-    <h2>4. In-app purchases, subscriptions, and microtransactions</h2>
-    <p>Some Brown Family Apps products may offer subscriptions, one-time purchases, or microtransactions. Purchases are processed by the applicable app store or payment platform, such as Google Play. We do not receive or store your full credit-card number. We may receive purchase status and transaction-related information required to unlock content, restore purchases, prevent fraud, provide support, or maintain entitlements.</p>
-    <p>Purchases are not used to build advertising profiles, and we do not sell purchase information.</p>
+    <section class="policy-card" id="eggsy" aria-labelledby="eggsy-title">
+      <h2 id="eggsy-title">Eggsy — Egg and flock tracking</h2>
+      <p>Eggsy stores the flock-management records you choose to create, including egg logs, hens and breeds, coops and flocks, notes, hatch/cull dates, feed-related entries, calculations and your preferences. Core records are designed to be stored locally on your device.</p>
+      <h3>Exports and photos</h3>
+      <p>If you save or share CSV exports, flock records or images, the copy goes to the file location or service you choose. Eggsy's hen-photo and “Employee of the Month” features may access images you select; optional photo editing can produce images stored or shared at your direction.</p>
+      <h3>AI breed scanner</h3>
+      <p>If you use a breed-identification feature that relies on a remote AI provider, the bird photo or other content you intentionally submit may be sent to that provider to return a result. Do not submit people, personal documents or sensitive content. Review any feature-specific disclosure presented in the app. AI identification is a guide, not a guarantee.</p>
+      <p>If diagnostic reporting is enabled in the installed version, the diagnostics section below also applies.</p>
+    </section>
 
-    <h2 id="eggsy">5. Eggsy</h2>
-    <div class="policy-card">
-      <h3>Core flock records</h3>
-      <p>Eggsy lets you store egg logs, flock and coop details, hen records, notes, hatch dates, cull dates, feed/supply/sale entries, and related settings. These records are intended to remain on your device unless you choose to export or share them.</p>
-      <h3>CSV export and sharing</h3>
-      <p>When you use Eggsy's export or share features, the app creates a file and hands it to the destination or sharing option you select. Brown Family Apps does not need to receive that exported file.</p>
-      <h3>Photos and AI-powered features</h3>
-      <p>Eggsy includes photo-based breed identification features. If a feature requires cloud AI processing, the bird image or other content you intentionally submit may be transmitted to the service provider used to generate the result. Do not submit images containing people, documents, location information, or other sensitive content. AI results may be inaccurate and should be treated as a guide rather than a definitive identification.</p>
-      <h3>Diagnostics</h3>
-      <p>If Firebase Crashlytics is enabled in the version of Eggsy you use, the diagnostic practices described in Section 3 apply.</p>
-    </div>
-
-    <h2 id="jobsnap">6. JobSnap</h2>
-    <div class="policy-card">
+    <section class="policy-card" id="jobsnapapp" aria-labelledby="jobsnap-title">
+      <h2 id="jobsnap-title">JobSnapApp — Contractor client and photo management</h2>
+      <p>JobSnapApp processes information you choose to enter or import to organize work, such as client names, contact details, job notes, schedules, crew time and job-site photos. Work records and photos are designed for local access; you may choose to create backups or share information yourself.</p>
       <table class="policy-table">
-        <tr><th>Account data</th><td>JobSnap may collect your email address when you create an account or sign in through Firebase Authentication or Google Sign-In. This is used to authenticate and secure your account.</td></tr>
-        <tr><th>Client & job data</th><td>Names, phone numbers, addresses, service notes, scheduling information, crew time, and other records you enter or import are processed to provide JobSnap's core functions.</td></tr>
-        <tr><th>Photos</th><td>Job-site photos may be stored locally and, when you explicitly choose it, backed up to your own Google Drive account.</td></tr>
-        <tr><th>Firebase</th><td>JobSnap's current privacy disclosure includes Firebase Authentication, Firebase Analytics, and Firebase Crashlytics. Firebase Analytics, when enabled, is used for product/reliability insight and not for advertising profiles.</td></tr>
-        <tr><th>Purchases</th><td>Subscriptions or other purchases are processed by Google Play or the applicable store. Brown Family Apps does not receive full payment-card information.</td></tr>
+        <tbody>
+          <tr><th>Sign-in</th><td>When you use Google Sign-In or an enabled Firebase Authentication feature, the identity provider may process account identifiers and your email address for authentication. This is distinct from your locally stored client/job records.</td></tr>
+          <tr><th>Contacts and photos</th><td>Contact information is accessed when you choose to import contacts. Job-site images you capture or select are handled for organization within the app; you decide when to export or share them.</td></tr>
+          <tr><th>Google Drive</th><td>When you choose Google Drive backup/restore, the relevant backup is sent to or retrieved from the Google account you authorize. Copies in your Drive remain there until removed in that account.</td></tr>
+          <tr><th>Diagnostics and analytics</th><td>JobSnapApp's dedicated privacy policy discloses Firebase Crashlytics and Firebase Analytics. Where these are enabled in your release, technical/crash data and usage events may be processed by Google Firebase for reliability and product improvement, not advertising profiles.</td></tr>
+          <tr><th>Subscriptions</th><td>Google Play handles subscription purchases and payment information. The app may use purchase status or entitlement information to enable a subscription.</td></tr>
+        </tbody>
       </table>
-      <p>JobSnap may also use Google Play Services and Google Drive APIs for sign-in and user-controlled backup/restore features.</p>
-    </div>
+      <p><strong>JobSnapApp-specific policy and account deletion:</strong> See the <a href="https://jobsnapapp.com/privacy.html" target="_blank" rel="noopener">JobSnapApp privacy and account deletion policy</a>. That page describes its separate contact process: <a href="mailto:jobsnapappinfo@gmail.com?subject=Account%20Deletion%20Request">jobsnapappinfo@gmail.com</a>, subject “Account Deletion Request.” Deleting local app storage alone does not necessarily remove identity-provider records or backups already saved to your own Google Drive.</p>
+    </section>
 
-    <h2>7. Permissions</h2>
-    <p>An app may request access to device capabilities such as the camera, photos/files, contacts, or notifications when a feature needs that access. We aim to request permissions only in context and only for the feature you choose to use. You can revoke permissions in your device settings, although doing so may disable the related feature.</p>
+    <section class="policy-card" id="tictactoe" aria-labelledby="tictactoe-title">
+      <h2 id="tictactoe-title">Tic-Tac-Toe — Two-player game</h2>
+      <p>Tic-Tac-Toe is an ad-free pass-and-play game designed to work without collecting personal information through its gameplay. Game scores, board state and preferences can be stored on your device. You do not need to enter your name, email or contact details to play.</p>
+      <p>Google Play may process information independently when you obtain, install or update the game or use a store-provided purchase feature. That platform processing is not the same as Brown Family Apps collecting your game records. If a future release adds online accounts, analytics or new services, this policy and the app's store disclosure will need to reflect that change.</p>
+    </section>
 
-    <h2>8. Data sharing</h2>
-    <p>We do not sell or rent personal data. We may share or transmit data to service providers only when needed to provide app functionality, such as authentication, crash reporting, cloud backup, AI processing, or app-store purchase processing. Those providers process information under their own terms and privacy practices.</p>
+    <section class="policy-card" id="serviceall" aria-labelledby="serviceall-title">
+      <h2 id="serviceall-title">ServiceAll — My Garage</h2>
+      <p>ServiceAll organizes the vehicle and equipment records you create: specifications, serial/VIN information, maintenance and repair history, costs, parts, photos, receipts, usage readings, reminders, service templates and preferences. Its core data is stored locally in the app.</p>
+      <h3>Backups and exports</h3>
+      <p>You can export or restore ServiceAll backup files. A backup saved through your device's file picker goes to the destination <em>you choose</em>, which may be local storage or a connected cloud provider such as Google Drive. Choosing a cloud destination is not automatic account synchronization by Brown Family Apps. If you enable scheduled local auto-backups, the app can store retained copies in its private storage according to your settings. Clearing app storage or uninstalling may remove copies kept only in that private area; separately exported copies remain wherever you saved them.</p>
+      <h3>Camera and notifications</h3>
+      <p>ServiceAll may request camera access when you choose to capture photos and notification permission when reminders require notifications. Features you do not use do not require you to grant those permissions. Your exported photos or records are shared only when you select an external destination.</p>
+    </section>
 
-    <h2>9. Data retention and deletion</h2>
-    <h3>Local-only data</h3>
-    <p>For app content stored only on your device, deleting the data inside the app, clearing app storage, or uninstalling the app may remove that local copy. Files you exported or backed up remain wherever you chose to save them until you delete them there.</p>
-    <h3>JobSnap account deletion</h3>
-    <p>You can delete individual records in JobSnap. To request deletion of your JobSnap account and associated Brown Family Apps cloud/server data, email <a href="mailto:brownfamilyapps219@gmail.com?subject=Account%20Deletion%20Request">brownfamilyapps219@gmail.com</a> with the subject <strong>Account Deletion Request</strong>. We will process verified deletion requests within 30 days unless retention is required for legal, security, fraud-prevention, or transaction-record obligations.</p>
-    <p>See the dedicated <a href="/account-deletion.html">Account Deletion page</a> for the request steps.</p>
+    <section class="policy-card" id="homesteader" aria-labelledby="homesteader-title">
+      <h2 id="homesteader-title">Homesteader — Homestead records</h2>
+      <p class="status-note">Feature availability varies as the app is developed and tested.</p>
+      <p>Homesteader is designed to keep animal details, ages, health and vet check notes, treatments, feed/supply costs, gardening records, images and other homestead information together. Entries and images you create are intended to remain in local app storage unless you deliberately export, share or back them up using a feature in your installed version.</p>
+      <p>The app may request camera or photo/file access when you choose to capture or attach images. Google Play and your device's operating-system backup features may process information independently of Brown Family Apps; an external copy you create is governed by its selected destination. We will revise this section if future Homesteader versions add cloud accounts or external analysis features.</p>
+    </section>
 
-    <h2>10. Security</h2>
-    <p>We use reasonable technical measures appropriate to the services we operate. Data sent to supported cloud services is generally protected in transit using HTTPS/TLS. No storage or transmission system can be guaranteed to be completely secure.</p>
+    <section class="policy-card" id="void-ascendant" aria-labelledby="void-title">
+      <h2 id="void-title">Void Ascendant — Space progression game</h2>
+      <p>Void Ascendant can store game settings, progression, upgrades and other saved-play information on your device. Gameplay does not require you to submit personal contact information to Brown Family Apps.</p>
+      <h3>Optional Google Play Games features</h3>
+      <p>If your release supports Google Play Games sign-in and you choose to use it, Google may process your gaming identity, achievements and related activity to provide those services. Google handles its own account and game-service information under its policies. Any online player data depends on the functionality enabled in your installed version.</p>
+      <h3>In-app purchases</h3>
+      <p>If you purchase optional game items or bundles, Google Play processes the transaction and the game may receive the purchase status and identifiers required to provide or restore the purchased content. We do not receive full payment-card details.</p>
+      <p>Technical crash reporting, if enabled in your installed version, is handled as described below. Online gaming and monetization features may change during development and testing.</p>
+    </section>
 
-    <h2>11. Children's privacy</h2>
-    <p>Unless an app's store listing or an app-specific policy states otherwise, our products are not directed to children under 13. We do not knowingly seek to collect personal information from children under 13. If you believe a child has provided personal information through one of our services, contact us so we can review and take appropriate action.</p>
+    <h2 id="diagnostics">4. Diagnostics, Crashlytics and analytics</h2>
+    <p>Some releases use—or may later add—Google Firebase Crashlytics to diagnose crashes and improve stability. When enabled, Crashlytics can receive crash traces, app and OS versions, device metadata, installation identifiers and related technical information. This does not mean every Brown Family Apps app uses Crashlytics. JobSnapApp's published dedicated policy also lists Firebase Analytics, which may process technical usage events if enabled in the installed version.</p>
+    <p>We use diagnostic data to improve app functionality and troubleshoot problems, not to build advertising profiles. We do not intentionally add app-entered personal content to custom diagnostic fields. Technical logs can nevertheless include incidental information associated with an error. Read <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy information</a> for details on Google's processing.</p>
 
-    <h2>12. Changes to this policy</h2>
-    <p>We may update this policy when an app gains or removes a feature, when a service provider changes, or when legal/platform requirements change. The "Last updated" date at the top will reflect material revisions.</p>
+    <h2 id="purchases">5. App purchases and subscriptions</h2>
+    <p>An app may be paid at download, offer subscriptions or sell optional in-app items, depending on the product and release. Purchases are processed by the relevant store, ordinarily Google Play. We may handle purchase tokens, product IDs, subscription status or other entitlement information needed to unlock or restore features or respond to purchase-related support. We do not handle full credit-card numbers. The store's retention and account processes are separate from Brown Family Apps.</p>
 
-    <h2>13. Contact</h2>
-    <p>Questions about privacy, support, or data deletion can be sent to <a href="mailto:brownfamilyapps219@gmail.com">brownfamilyapps219@gmail.com</a>.</p>
+    <h2 id="permissions">6. Device permissions</h2>
+    <p>Depending on app and feature, we may request camera, photo/file, contact or notification access. Permission requests should relate to a function you choose to use—for example, capturing an equipment photo, importing a JobSnapApp client or receiving a maintenance reminder. You can change permissions in device settings, although disabling a permission may prevent the associated feature from working.</p>
+
+    <h2 id="sharing">7. Service providers and sharing</h2>
+    <p>We do not sell or rent your information. Information may be transmitted to service providers only as needed for a feature or service you use: Google Play for purchases and platform services; Google/Firebase for authentication, diagnostics or analytics where integrated; Google Drive or another destination you select for backups; an AI provider when you choose an online photo-analysis feature; and your email or support provider when you contact us. Your choice to share/export content to another application or provider subjects that copy to the recipient's policies. Different apps do not automatically share one combined database.</p>
+
+    <h2 id="retention">8. Retention and deletion</h2>
+    <h3>Locally stored app content</h3>
+    <p>You can remove local content using any available in-app delete option, clear the app's storage, or uninstall it. Backups you saved elsewhere, shared files and data held by external platforms will not necessarily be deleted by these actions. Operating-system backups may also require separate management. For instructions, see our <a href="/account-deletion.html">app data and account deletion page</a>.</p>
+    <h3>JobSnapApp sign-in data</h3>
+    <p>If you have JobSnapApp sign-in or Firebase Authentication data, use the request process in its <a href="https://jobsnapapp.com/privacy.html" target="_blank" rel="noopener">dedicated policy</a> or email <a href="mailto:jobsnapappinfo@gmail.com?subject=Account%20Deletion%20Request">jobsnapappinfo@gmail.com</a> with the subject “Account Deletion Request.” Local deletion and Google Drive backup deletion are separate steps. Identity-provider, diagnostic and transaction data may have provider-specific retention requirements.</p>
+    <h3>Other third-party services and support</h3>
+    <p>If you use Google Play Games, Google Play purchases or another third-party account, use that provider's controls for its own account data. If you contact Brown Family Apps, we keep correspondence only as reasonably necessary to respond, manage follow-up and comply with applicable obligations. For questions about data we control, email the relevant contact below.</p>
+
+    <h2 id="security">9. Security</h2>
+    <p>We aim to use security measures appropriate to each app and the services it uses. Supported online providers generally encrypt information in transit. Local data security also depends on your device settings and the protection applied by any backup or sharing destination you select. No device, storage or transmission system can be guaranteed completely secure.</p>
+
+    <h2 id="children">10. Children's privacy</h2>
+    <p>Our apps are not intended to collect personal information from children under 13. Tic-Tac-Toe can be played together on one device without supplying personal information. Our products are not presented as social networks for children. If you believe a child has sent personal information through a support or online feature, please contact us so we can review it.</p>
+
+    <h2 id="updates">11. Policy changes</h2>
+    <p>We will update this policy if our apps, service providers or data practices materially change. The update date above reflects the latest revision. Store listings and app-specific disclosures should describe the functionality of the version you install; planned features do not imply active data processing.</p>
+
+    <h2 id="contact">12. Contact</h2>
+    <p>General privacy questions for Brown Family Apps: <a href="mailto:brownfamilyapps219@gmail.com">brownfamilyapps219@gmail.com</a>. For JobSnapApp-specific privacy or account deletion: <a href="mailto:jobsnapappinfo@gmail.com">jobsnapappinfo@gmail.com</a>.</p>
+    <p class="policy-small">This policy covers the named Brown Family Apps products and website. Third-party platform and destination policies also apply to the information those providers independently process.</p>
 
     <div class="policy-actions">
-      <a class="button primary" href="/">Back to Brown Family Apps</a>
-      <a class="button secondary" href="/account-deletion.html">Account deletion</a>
+      <a class="button primary" href="/">All Brown Family Apps</a>
+      <a class="button secondary" href="/account-deletion.html">App data deletion</a>
     </div>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-inner"><div><strong>Brown Family Apps</strong><span>Practical software, built with care.</span></div><p>© <span id="year"></span> Brown Family Apps</p></div></footer>
+  <footer class="site-footer"><div class="shell footer-inner"><div><strong>Brown Family Apps</strong><span>Practical software, built with care.</span></div><nav aria-label="Footer links"><a href="/">Home</a><a href="/account-deletion.html">Data deletion</a></nav><p>© <span id="year"></span> Brown Family Apps</p></div></footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
