@@ -112,6 +112,8 @@ h1 span{color:var(--orange)}
   color:#34445a;font-size:.9rem;line-height:1.4
 }
 .product-price strong{font-size:1rem;color:var(--ink)}
+.product-price a{margin-left:auto;color:#185c43;font-size:.78rem;font-weight:850;text-underline-offset:3px;white-space:nowrap}
+.jobsnap-card .product-price a,.serviceall-card .product-price a{color:#a6e6fa}
 .jobsnap-card .product-price,.serviceall-card .product-price{
   color:#d7e5f4;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15)
 }
