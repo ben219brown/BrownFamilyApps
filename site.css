@@ -99,3 +99,7 @@ h1 span{color:var(--orange)}
 .jobsnap-real-visual:hover .jobsnap-hero-image{transform:scale(1.02)}
 @media(max-width:900px){.jobsnap-real-visual{min-height:460px}.jobsnap-hero-image{max-height:430px}}
 @media(max-width:700px){.jobsnap-brand-logo{width:82px!important;height:62px!important}.jobsnap-real-visual{min-height:360px;padding:20px}.jobsnap-hero-image{max-height:340px}}
+
+/* Accessible, transparent new Brown Family Apps masthead logo (2026-09-25). */
+.brand .site-logo{display:block;width:240px;height:auto;max-height:70px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 1px 1px rgba(17,24,39,.25))}
+@media(max-width:700px){.brand .site-logo{width:180px;max-height:56px}}
