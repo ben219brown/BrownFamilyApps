@@ -4,17 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#071522" />
-  <meta name="description" content="ServiceAll is a vehicle and equipment maintenance tracker for service history, reminders, parts, costs, photos, notes, mileage, hours, and tool records." />
+  <meta name="description" content="ServiceAll: My Garage helps track vehicle and equipment maintenance, service history, reminders, repair costs, parts, receipts and photos for everything you maintain." />
   <link rel="canonical" href="https://brownfamilyapps.com/serviceall.html" />
-  <meta property="og:title" content="ServiceAll | Vehicle & Equipment Maintenance Tracker" />
-  <meta property="og:description" content="Keep vehicle, equipment, and tool maintenance history, reminders, parts, costs, photos, notes, mileage, and hours in one place." />
+  <meta property="og:title" content="ServiceAll: My Garage | Vehicle & Equipment Maintenance" />
+  <meta property="og:description" content="One garage for all your machines. Track maintenance, reminders, parts, photos, and repair costs with ServiceAll." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Brown Family Apps" />
   <meta property="og:url" content="https://brownfamilyapps.com/serviceall.html" />
-  <meta property="og:image" content="https://brownfamilyapps.com/assets/apps/serviceall-feature.webp" />
-  <title>ServiceAll | Vehicle & Equipment Maintenance Tracker</title>
+  <meta property="og:image" content="https://brownfamilyapps.com/assets/serviceall/feature-banner.webp" />
+  <title>ServiceAll: My Garage | Vehicle & Equipment Maintenance</title>
   <link rel="icon" href="/assets/favicons/serviceall.ico?v=20260923" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
-  <link rel="preload" as="image" href="/assets/apps/serviceall-feature.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/serviceall/feature-banner.webp" fetchpriority="high">
 
   <style>
     :root {
@@ -686,35 +686,81 @@
   .hero-grid{grid-template-columns:1fr;gap:36px}
 .serviceall-feature{min-width:0;overflow:hidden;border-radius:24px;border:1px solid rgba(85,219,255,.2);box-shadow:0 24px 70px rgba(0,0,0,.3)}
 .serviceall-feature img{display:block;width:100%;height:auto;object-fit:contain}
+
+/* 2026 ServiceAll storefront refresh — designed around original app screens */
+:root {scroll-padding-top:90px}
+.hero.hero-refreshed {min-height:0;padding:88px 0 64px}
+.hero-refreshed .hero-grid {display:block}
+.hero-refreshed .hero-copy {max-width:940px;margin:0 auto 34px;text-align:center}
+.hero-refreshed .hero-copy h1 {font-size:clamp(2.9rem,6.7vw,6.4rem);line-height:1.03;letter-spacing:-.056em;max-width:none;margin:22px auto}
+.hero-refreshed .hero-copy h1 span {color:var(--cyan)}
+.hero-refreshed .hero-copy>p {margin:0 auto 26px;max-width:720px;font-size:clamp(1.04rem,2vw,1.23rem)}
+.hero-refreshed .hero-actions,.hero-refreshed .hero-points {justify-content:center}
+.hero-refreshed .serviceall-feature {max-width:1300px;margin-inline:auto;background:#081625;border-color:rgba(84,207,255,.25);border-radius:22px}
+.hero-refreshed .serviceall-feature img {width:100%;height:auto;object-fit:contain;object-position:center}
+.hero-refreshed .kicker {margin-inline:auto}
+.gallery-section {padding:40px 0 84px}
+.gallery-lead {max-width:780px;margin-bottom:34px}
+.gallery-lead h2 {font-size:clamp(2.2rem,4.4vw,3.65rem);line-height:1.08;margin:10px 0 14px}
+.gallery-lead p {color:var(--muted);font-size:1.05rem}
+.showcase-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.showcase-card {min-width:0;margin:0;border-radius:22px;overflow:hidden;background:#0d1b2b;border:1px solid rgba(95,209,250,.18);box-shadow:0 20px 45px rgba(0,0,0,.19);transition:transform .2s,border-color .2s}
+.showcase-card:hover {transform:translateY(-3px);border-color:rgba(84,207,255,.4)}
+.showcase-card picture {display:block;background:linear-gradient(180deg,#063460,#040d1d)}
+.showcase-card picture img {display:block;width:100%;height:auto;aspect-ratio:941/1672;object-fit:contain}
+.showcase-card figcaption {padding:19px 20px 22px}
+.showcase-card h3 {font-size:1.15rem;margin:0 0 7px;letter-spacing:-.02em}
+.showcase-card p {margin:0;color:#9db5c3;font-size:.9rem;line-height:1.55}
+.band-callout {margin-top:66px;padding:35px 40px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center;border:1px solid rgba(77,198,245,.22);border-radius:24px;background:linear-gradient(115deg,#0c2440,#0b1a2e 72%)}
+.band-callout h2 {font-size:clamp(1.9rem,3.3vw,2.8rem);line-height:1.12;margin:10px 0}
+.band-callout p {color:var(--muted);margin:0}
+.band-steps {list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.band-steps li {display:flex;align-items:start;gap:11px;color:#deeff8;font-weight:670}
+.band-steps b {display:grid;place-items:center;flex:0 0 27px;width:27px;height:27px;border-radius:9px;background:rgba(0,200,255,.16);color:#54d6ff}
+.real-screens {padding:64px 0 88px;background:linear-gradient(180deg,rgba(13,37,58,.55),rgba(4,15,26,.15))}
+.real-screens h2 {font-size:clamp(2rem,4vw,3.3rem);margin:5px 0 13px}
+.real-screens .screens-intro {color:var(--muted);max-width:680px;margin:0 0 27px}
+.screen-rail {display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-color:#267ca4 #0b2135;padding:5px 4px 20px}
+.screen-rail figure {flex:0 0 min(225px,55vw);min-width:0;margin:0;scroll-snap-align:start;border-radius:17px;background:#101c2f;border:1px solid rgba(99,209,253,.16);padding:10px;text-align:center}
+.screen-rail a {display:block;text-decoration:none}
+.screen-rail img {display:block;width:100%;height:auto;max-height:385px;object-fit:contain;object-position:center;border-radius:10px}
+.screen-rail figcaption {padding:10px 0 4px;color:#cce8f6;font-weight:760;font-size:.86rem}
+.benefits-section {padding:75px 0}
+.benefits-section .section-head {margin-bottom:30px}
+.benefits-section h2 {font-size:clamp(2.1rem,4.1vw,3.35rem);margin:7px 0 16px}
+.benefits-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.benefit {padding:27px;background:rgba(14,36,55,.73);border:1px solid rgba(95,209,250,.13);border-radius:19px}
+.benefit>span {color:var(--cyan);font-size:1.55rem;display:block;margin-bottom:13px}
+.benefit h3 {font-size:1.11rem;margin:0 0 8px}
+.benefit p {color:#a8becb;font-size:.91rem;margin:0}
+.asset-row {display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.asset-row span {padding:7px 12px;border-radius:999px;background:#102b40;border:1px solid #265573;color:#d2ecf8;font-size:.83rem;font-weight:700}
+.final-cta {padding:42px 0 90px}
+.final-cta .cta {margin:0}
+.final-cta .cta h2 {font-size:clamp(1.9rem,4vw,3.2rem)}
+.final-cta .cta p {max-width:650px;color:var(--muted)}
+@media(max-width:960px){.showcase-grid,.benefits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.band-callout{grid-template-columns:1fr}}
+@media(max-width:620px){.hero.hero-refreshed{padding:56px 0 36px}.hero-refreshed .hero-copy{text-align:left}.hero-refreshed .hero-copy h1{margin:18px 0}.hero-refreshed .hero-copy>p{margin:0 0 23px}.hero-refreshed .hero-actions,.hero-refreshed .hero-points{justify-content:flex-start}.hero-refreshed .kicker{margin:0}.hero-refreshed .hero-points{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.hero-refreshed .serviceall-feature{border-radius:12px}.showcase-grid,.benefits-grid{grid-template-columns:1fr}.showcase-card{max-width:450px;margin-inline:auto}.gallery-section{padding:32px 0 52px}.band-callout{padding:24px;margin-top:42px}.real-screens{padding:52px 0}.benefits-section{padding:56px 0}.benefit{padding:22px}}
+@media(prefers-reduced-motion:reduce){.showcase-card{transition:none}}
+
 </style>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "@id": "https://brownfamilyapps.com/serviceall.html#app",
-    "name": "ServiceAll",
-    "url": "https://brownfamilyapps.com/serviceall.html",
-    "image": "https://brownfamilyapps.com/serviceall-icon.webp",
-    "operatingSystem": "Android",
-    "applicationCategory": "UtilitiesApplication",
-    "description": "ServiceAll is an in-development maintenance tracking app for vehicles, equipment, and tools, with service history, reminders, parts and components, costs, photos, and notes.",
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://brownfamilyapps.com/#organization",
-      "name": "Brown Family Apps",
-      "url": "https://brownfamilyapps.com/"
-    },
-    "featureList": [
-      "Vehicle and equipment records",
-      "Service history",
-      "Maintenance reminders",
-      "Parts and components",
-      "Cost tracking",
-      "Photos and notes"
-    ]
-  }
-  </script>
+{
+  "@context":"https://schema.org",
+  "@type":"MobileApplication",
+  "@id":"https://brownfamilyapps.com/serviceall.html#app",
+  "name":"ServiceAll: My Garage",
+  "alternateName":"ServiceAll",
+  "url":"https://brownfamilyapps.com/serviceall.html",
+  "image":"https://brownfamilyapps.com/assets/serviceall/feature-banner.webp",
+  "operatingSystem":"Android",
+  "applicationCategory":"UtilitiesApplication",
+  "description":"A vehicle and equipment maintenance tracker for your cars, trucks, tractors, motorcycles, ATVs, mowers, tools and other equipment.",
+  "featureList":["Garage organization","Vehicle and equipment service history","Mileage and operating-hour logging","Service reminders","Parts and quick-reference specifications","Maintenance and repair expenses","Receipt and photo folders","Local backup and restore","Equipment archiving"],
+  "publisher":{"@type":"Organization","@id":"https://brownfamilyapps.com/#organization","name":"Brown Family Apps","url":"https://brownfamilyapps.com/"}
+}
+</script>
 
 </head>
 <body>
@@ -726,254 +772,62 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#features">Features</a>
-        <a href="#roadmap">AI roadmap</a>
+        <a href="#screens">Screenshots</a>
         <a href="/">Brown Family Apps</a>
-        <a class="nav-cta" href="mailto:brownfamilyapps219@gmail.com?subject=ServiceAll%20updates">Get updates</a>
+        <a class="nav-cta" href="mailto:brownfamilyapps219@gmail.com?subject=ServiceAll%20availability">Get in touch</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <div class="kicker"><span class="kicker-dot"></span> Your maintenance memory</div>
-          <h1>Maintenance memory for <span class="gradient-word">everything.</span></h1>
-          <p>ServiceAll keeps the history of your vehicles, equipment, and tools in one place—service records, parts, photos, notes, costs, and reminders included.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="mailto:brownfamilyapps219@gmail.com?subject=ServiceAll%20updates">Get launch updates <span aria-hidden="true">→</span></a>
-            <a class="button button-secondary" href="#features">See what it tracks</a>
-          </div>
-          <div class="hero-points" aria-label="Product highlights">
-            <span><i>✓</i> Vehicles</span>
-            <span><i>✓</i> Equipment</span>
-            <span><i>✓</i> Tools</span>
-            <span><i>✓</i> Date + interval reminders</span>
-          </div>
-        </div>
-
-        <div class="serviceall-feature"><img src="/assets/apps/serviceall-feature.webp" width="1774" height="887" alt="ServiceAll feature graphic: Your maintenance memory, with garage and vehicle maintenance screens" loading="eager" fetchpriority="high" decoding="async"></div>
-      </div>
-    </section>
-
-    <section class="section" id="why">
-      <div class="shell">
-        <div class="section-head">
-          <div class="eyebrow">One maintenance home</div>
-          <h2>Cars are only part of the story.</h2>
-          <p>The same maintenance problem shows up everywhere: you did the work, bought the part, took the photo—and six months later you cannot remember when, what, or why. ServiceAll gives every asset its own long-term record.</p>
-        </div>
-
-        <div class="asset-types">
-          <article class="type-card">
-            <div class="type-icon">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6 30h36l-4-11H16l-5 11"/><path d="M10 30v6h4m24-6v6h-4"/><circle cx="16" cy="35" r="3.5"/><circle cx="32" cy="35" r="3.5"/><path d="M18 19l3-6h10l4 6"/>
-              </svg>
-            </div>
-            <h3>Vehicles</h3>
-            <p>Cars, trucks, trailers, motorcycles, ATVs—keep service dates, mileage, parts, inspections, registration notes, and costs together.</p>
-          </article>
-
-          <article class="type-card">
-            <div class="type-icon">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M8 34h32M12 34V18h11v16m4 0V12h9v22"/><path d="M14 18l4-6 4 6M31 12l2-5 2 5"/><circle cx="15" cy="38" r="3"/><circle cx="35" cy="38" r="3"/>
-              </svg>
-            </div>
-            <h3>Equipment</h3>
-            <p>Mowers, generators, tractors, shop machines, compressors, and anything else with service hours, filters, belts, fluids, or inspections.</p>
-          </article>
-
-          <article class="type-card">
-            <div class="type-icon">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M10 38l14-14m3-3 8-8 5 5-8 8m-8-2 5 5-14 14H8v-7l14-14Z"/><path d="M28 10l10 10"/>
-              </svg>
-            </div>
-            <h3>Tools</h3>
-            <p>Track serial numbers, purchase details, batteries, blades, accessories, repairs, and replacement parts for the tools you depend on.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell workflow">
-        <div class="workflow-panel" aria-label="Example asset service timeline">
-          <div class="timeline-item">
-            <div class="time-dot">SEP</div>
-            <div class="time-card">
-              <div class="time-top"><b>Oil + filter change</b><span>Sep 12</span></div>
-              <p>5W-30 synthetic • 48,322 mi • photo attached</p>
-              <div class="chips"><span class="chip">$47.82</span><span class="chip">Oil filter</span><span class="chip">Maintenance</span></div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-dot">JUL</div>
-            <div class="time-card">
-              <div class="time-top"><b>Front brake inspection</b><span>Jul 04</span></div>
-              <p>Pads measured and photos saved for comparison.</p>
-              <div class="chips"><span class="chip">Inspection</span><span class="chip">2 photos</span></div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="time-dot">APR</div>
-            <div class="time-card">
-              <div class="time-top"><b>Cabin air filter</b><span>Apr 21</span></div>
-              <p>Part number and installation note saved to components.</p>
-              <div class="chips"><span class="chip">Component</span><span class="chip">$18.49</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section-copy">
-          <div class="eyebrow">Your mechanical memory</div>
-          <h2>Remember what you did. Know what comes next.</h2>
-          <p>Every service record becomes part of a searchable timeline. Attach the note, photo, part, cost, mileage, or operating hours now—so future you does not have to guess.</p>
-          <div class="checklist">
-            <div class="check"><i>✓</i><div><strong>Date-based reminders</strong> for inspections, registrations, warranties, and one-time tasks.</div></div>
-            <div class="check"><i>✓</i><div><strong>Interval reminders</strong> for mileage, operating hours, or recurring maintenance windows.</div></div>
-            <div class="check"><i>✓</i><div><strong>Component history</strong> so filters, belts, batteries, blades, and other parts stay tied to the asset they belong to.</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="features">
-      <div class="shell">
-        <div class="section-head">
-          <div class="eyebrow">Useful on day one</div>
-          <h2>Less paperwork. Better records.</h2>
-          <p>ServiceAll is built around the information you actually need when something is due, something breaks, or you are trying to remember what happened last time.</p>
-        </div>
-
-        <div class="features">
-          <article class="feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="24" height="19" rx="4"/><circle cx="12" cy="14" r="3"/><path d="M6 23l7-6 5 4 4-4 4 4"/></svg>
-            </div>
-            <h3>Photos + notes</h3>
-            <p>Document what you saw, what you changed, and what the part looked like while the details are still fresh.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="17" r="10"/><path d="M16 11v6l4 3M11 4h10"/></svg>
-            </div>
-            <h3>Flexible reminders</h3>
-            <p>Use calendar dates or maintenance intervals based on mileage, hours, or recurring time periods.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 24l8-8m2-2 5-5 3 3-5 5m-5-1 4 4-8 8H7v-5l8-8Z"/><path d="M19 7l6 6"/></svg>
-            </div>
-            <h3>Parts + components</h3>
-            <p>Save part numbers, install dates, and linked service records for components you expect to replace again.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 25h20M9 22V12m7 10V7m7 15v-6"/><path d="M7 9l7-4 6 3 5-4"/></svg>
-            </div>
-            <h3>Cost history</h3>
-            <p>Record service and repair costs so you can see what an asset is actually costing you over time.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="14" r="8"/><path d="m20 20 7 7M10 14h8M14 10v8"/></svg>
-            </div>
-            <h3>Searchable history</h3>
-            <p>Find an asset, past service, or recorded component without digging through receipts, notes, and camera rolls.</p>
-          </article>
-
-          <article class="feature">
-            <div class="feature-icon">
-              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h12l5 5v19H8z"/><path d="M20 4v6h6M12 17h9M12 21h9M12 13h4"/></svg>
-            </div>
-            <h3>Portable service records</h3>
-            <p>Service history is being designed with PDF/CSV export in mind, making records useful for resale, handoff, or your own archive.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="maintenance-tracking">
-      <div class="shell">
-        <div class="section-head">
-          <div class="eyebrow">A maintenance log for more than one machine</div>
-          <h2>Vehicle, equipment, and tool maintenance in one history.</h2>
-          <p>ServiceAll is being built as a vehicle maintenance tracker, equipment maintenance log, and service-history record for the things you own and depend on. Instead of keeping oil changes in one notebook, mower hours in another, and part numbers in your phone, each asset gets one timeline.</p>
-        </div>
-        <div class="features">
-          <article class="feature">
-            <div class="feature-icon">🚙</div>
-            <h3>Vehicle maintenance records</h3>
-            <p>Track oil changes, filters, brakes, batteries, inspections, mileage, repair notes, photos, parts, and the next service that is due.</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon">🚜</div>
-            <h3>Equipment maintenance tracking</h3>
-            <p>Keep operating hours, recurring service intervals, repairs, components, and costs organized for tractors, mowers, generators, and other equipment.</p>
-          </article>
-          <article class="feature">
-            <div class="feature-icon">🧰</div>
-            <h3>Tool & component history</h3>
-            <p>Save replacement dates, part numbers, blades, belts, batteries, filters, warranties, and notes for tools and components you expect to service again.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="roadmap">
-      <div class="shell roadmap-wrap">
-        <div class="roadmap-head">
-          <div>
-            <div class="eyebrow">Planned intelligence</div>
-            <h2>Smarter help is on the roadmap.</h2>
-            <p style="color:var(--muted);margin-bottom:0">The core app is about reliable maintenance records first. AI features are planned as focused tools that make those records faster and more useful—not as a replacement for qualified mechanical judgment.</p>
-          </div>
-          <div class="planned">Roadmap</div>
-        </div>
-
-        <div class="roadmap-grid">
-          <article class="roadmap-step">
-            <div class="step-num">PHASE 01</div>
-            <h3>Photo → part identification</h3>
-            <p>Photograph a filter, belt, label, or part tag and use recognition/OCR to help capture the brand or part number.</p>
-          </article>
-          <article class="roadmap-step">
-            <div class="step-num">PHASE 02</div>
-            <h3>Voice-to-record logging</h3>
-            <p>Say what you changed and let ServiceAll turn the description into a structured service entry tied to the right asset.</p>
-          </article>
-          <article class="roadmap-step">
-            <div class="step-num">PHASE 03</div>
-            <h3>Troubleshooting assistance</h3>
-            <p>Use symptoms plus asset history to surface likely causes, checks to perform, and parts that may deserve inspection.</p>
-          </article>
-        </div>
-        <p class="roadmap-note">Planned features may change during development. Troubleshooting assistance is intended as an aid, not a definitive diagnosis.</p>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="shell cta">
-        <div>
-          <div class="eyebrow">ServiceAll is in development</div>
-          <h2>Your maintenance history should be easier to keep than your machines.</h2>
-          <p>Want to know when ServiceAll is ready? Send Brown Family Apps a note and we’ll keep you in the loop.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="button button-primary" href="mailto:brownfamilyapps219@gmail.com?subject=ServiceAll%20launch%20updates">Get launch updates</a>
-          <a class="button button-secondary" href="/">More Brown Family Apps</a>
-        </div>
-      </div>
-    </section>
-  </main>
+<section class="hero hero-refreshed">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <div class="kicker"><span class="kicker-dot"></span> ServiceAll: My Garage</div>
+      <h1>All your equipment.<br><span>One garage.</span></h1>
+      <p>Your trucks, tractors, motorcycles, mowers and tools all need attention. ServiceAll helps you remember what you did, what it cost and what needs doing next—without juggling notebooks and receipts.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#screens">See the real app <span aria-hidden="true">→</span></a><a class="button button-secondary" href="#features">Explore features</a></div>
+      <div class="hero-points" aria-label="ServiceAll highlights"><span><i>✓</i> Vehicles & equipment</span><span><i>✓</i> Service & repair costs</span><span><i>✓</i> Maintenance reminders</span><span><i>✓</i> Parts, photos & receipts</span></div>
+    </div>
+    <div class="serviceall-feature"><img src="/assets/serviceall/feature-banner.webp" width="1440" height="703" alt="ServiceAll feature graphic showing garage, service history, equipment photos and maintenance tracking" loading="eager" fetchpriority="high" decoding="async"></div>
+  </div>
+</section>
+<section id="features" class="gallery-section"><div class="shell">
+  <div class="gallery-lead"><div class="eyebrow">Keep your stuff running</div><h2>Because you can't remember everything.</h2><p>Oil filters, last service dates, repair totals, manuals and maintenance intervals: keep the information you reach for in one organized place.</p></div>
+  <div class="showcase-grid"><figure class="showcase-card"><picture><img src="/assets/serviceall/garage-overview.webp" alt="ServiceAll promotional graphic illustrating everything in one garage" width="690" height="1226" loading="lazy" decoding="async"></picture><figcaption><h3>Everything in one garage</h3><p>Organize vehicles, ATVs, motorcycles, tractors, lawn equipment and tools. Switch views, filter categories and find what you own.</p></figcaption></figure>
+<figure class="showcase-card"><picture><img src="/assets/serviceall/log-service.webp" alt="ServiceAll promotional graphic illustrating log service without the paperwork" width="690" height="1226" loading="lazy" decoding="async"></picture><figcaption><h3>Log service without the paperwork</h3><p>Record what you did, when you did it, the usage reading and your maintenance or repair costs.</p></figcaption></figure>
+<figure class="showcase-card"><picture><img src="/assets/serviceall/service-history.webp" alt="ServiceAll promotional graphic illustrating know your maintenance history" width="690" height="1226" loading="lazy" decoding="async"></picture><figcaption><h3>Know your maintenance history</h3><p>See previous work, service dates, mileage and costs in one convenient history.</p></figcaption></figure>
+<figure class="showcase-card"><picture><img src="/assets/serviceall/parts-specs.webp" alt="ServiceAll promotional graphic illustrating the right details at the parts counter" width="690" height="1226" loading="lazy" decoding="async"></picture><figcaption><h3>The right details at the parts counter</h3><p>Store identification details, part and fluid information, purchase history and quick-reference notes.</p></figcaption></figure>
+<figure class="showcase-card"><picture><img src="/assets/serviceall/photos-records.webp" alt="ServiceAll promotional graphic illustrating photos, receipts and records together" width="690" height="1226" loading="lazy" decoding="async"></picture><figcaption><h3>Photos, receipts and records together</h3><p>Give equipment its own folders for receipts, manuals, serial labels, quick references and before-and-after photos.</p></figcaption></figure>
+<figure class="showcase-card"><picture><img src="/assets/serviceall/backup-restore.webp" alt="ServiceAll promotional graphic illustrating keep a copy of your records" width="690" height="1226" loading="lazy" decoding="async"></picture><figcaption><h3>Keep a copy of your records</h3><p>Create local ServiceAll backup files, restore your garage and archive equipment you no longer actively maintain.</p></figcaption></figure></div>
+  <aside class="band-callout" aria-label="A convenient parts counter example"><div><div class="eyebrow">Your digital mechanical memory</div><h2>Standing at the parts counter? Know the answer.</h2><p>Pull up the equipment, check its quick reference, and find the oil grade, saved part details or last maintenance note without searching through old receipts.</p></div><ol class="band-steps"><li><b>1</b>Find your vehicle or machine</li><li><b>2</b>Open its saved specifications</li><li><b>3</b>Check previous work and photos</li></ol></aside>
+</div></section>
+<section id="screens" class="real-screens"><div class="shell">
+  <div class="eyebrow">No mock app interfaces</div><h2>See ServiceAll in action.</h2><p class="screens-intro">These are genuine screens from the current Android app—not recreated concept interfaces. Scroll to explore, or open any screen to see it larger.</p>
+  <div class="screen-rail" aria-label="ServiceAll actual app screenshot gallery"><figure><a href="/assets/serviceall/screens/garage.webp" target="_blank" rel="noopener" aria-label="View full garage overview screenshot"><img src="/assets/serviceall/screens/garage.webp" width="519" height="1100" loading="lazy" decoding="async" alt="Actual ServiceAll app screenshot: Garage overview"></a><figcaption>Garage overview</figcaption></figure>
+<figure><a href="/assets/serviceall/screens/cj-detail.webp" target="_blank" rel="noopener" aria-label="View full equipment profile screenshot"><img src="/assets/serviceall/screens/cj-detail.webp" width="519" height="1100" loading="lazy" decoding="async" alt="Actual ServiceAll app screenshot: Equipment profile"></a><figcaption>Equipment profile</figcaption></figure>
+<figure><a href="/assets/serviceall/screens/history.webp" target="_blank" rel="noopener" aria-label="View full service history screenshot"><img src="/assets/serviceall/screens/history.webp" width="519" height="1100" loading="lazy" decoding="async" alt="Actual ServiceAll app screenshot: Service history"></a><figcaption>Service history</figcaption></figure>
+<figure><a href="/assets/serviceall/screens/specs.webp" target="_blank" rel="noopener" aria-label="View full equipment specifications screenshot"><img src="/assets/serviceall/screens/specs.webp" width="519" height="1100" loading="lazy" decoding="async" alt="Actual ServiceAll app screenshot: Equipment specifications"></a><figcaption>Equipment specifications</figcaption></figure>
+<figure><a href="/assets/serviceall/screens/photos.webp" target="_blank" rel="noopener" aria-label="View full photo folders screenshot"><img src="/assets/serviceall/screens/photos.webp" width="519" height="1100" loading="lazy" decoding="async" alt="Actual ServiceAll app screenshot: Photo folders"></a><figcaption>Photo folders</figcaption></figure>
+<figure><a href="/assets/serviceall/screens/settings.webp" target="_blank" rel="noopener" aria-label="View full settings & backup screenshot"><img src="/assets/serviceall/screens/settings.webp" width="519" height="1100" loading="lazy" decoding="async" alt="Actual ServiceAll app screenshot: Settings & backup"></a><figcaption>Settings & backup</figcaption></figure></div>
+</div></section>
+<section class="benefits-section" id="maintenance-tracking"><div class="shell">
+  <div class="section-head"><div class="eyebrow">Built for the equipment you maintain</div><h2>Track the work. Skip the guesswork.</h2><p>ServiceAll combines vehicle and equipment records with the everyday details that make maintenance easier.</p></div>
+  <div class="benefits-grid">
+    <article class="benefit"><span aria-hidden="true">▦</span><h3>One organized garage</h3><p>Keep cars, trucks, tractors, motorcycles, ATVs, UTVs and shop equipment in their own records with searchable details and photos.</p></article>
+    <article class="benefit"><span aria-hidden="true">↻</span><h3>Service logs and history</h3><p>Record maintenance and repairs with dates, usage readings, notes and costs. Find the work you completed the next time you need it.</p></article>
+    <article class="benefit"><span aria-hidden="true">◷</span><h3>Reminders that make sense</h3><p>Track upcoming maintenance with date and usage-based reminders for your machine's mileage or operating hours.</p></article>
+    <article class="benefit"><span aria-hidden="true">⚙</span><h3>Parts and quick reference</h3><p>Keep oil types, part numbers, serial information, purchase records and machine specifications ready when you need them.</p></article>
+    <article class="benefit"><span aria-hidden="true">▧</span><h3>Photo folders and receipts</h3><p>Store service photos, receipts, manuals, labels and before-and-after shots alongside the equipment they belong to.</p></article>
+    <article class="benefit"><span aria-hidden="true">⇧</span><h3>Local backups and archives</h3><p>Export or restore a local ServiceAll backup file, archive retired equipment and choose the app's theme to suit your setup.</p></article>
+  </div>
+  <div class="asset-row" aria-label="Examples of equipment types"><span>Trucks & cars</span><span>Tractors</span><span>Lawn mowers</span><span>ATVs & UTVs</span><span>Motorcycles</span><span>Shop equipment</span><span>Tools</span></div>
+</div></section>
+<section class="final-cta"><div class="shell cta">
+  <div><div class="eyebrow">ServiceAll by Brown Family Apps</div><h2>Keep your stuff running.</h2><p>ServiceAll is being refined for Android. Questions, feedback or want to hear about availability? Get in touch with Brown Family Apps.</p></div>
+  <div class="cta-actions"><a class="button button-primary" href="mailto:brownfamilyapps219@gmail.com?subject=ServiceAll%20availability">Ask about ServiceAll</a><a class="button button-secondary" href="/">See our other apps</a></div>
+</div></section>
+</main>
 
   <footer>
     <div class="shell footer-grid">
