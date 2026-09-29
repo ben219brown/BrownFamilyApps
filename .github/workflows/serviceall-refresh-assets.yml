@@ -1,0 +1,157 @@
+name: Publish refreshed ServiceAll screenshots
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/serviceall/incoming/Marketing Photos.zip"
+      - ".github/workflows/serviceall-refresh-assets.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: serviceall-screenshot-refresh
+  cancel-in-progress: false
+
+jobs:
+  optimize-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install image optimizer
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Create genuine screenshots and refresh site references
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps, UnidentifiedImageError
+          from io import BytesIO
+          import zipfile
+
+          incoming = Path("assets/serviceall/incoming/Marketing Photos.zip")
+          if not incoming.is_file():
+              print("No incoming Marketing Photos.zip. Upload the ZIP to assets/serviceall/incoming/ to activate this job.")
+              raise SystemExit(0)
+
+          # Only take specifically selected, real app screenshots from this archive.
+          screens = {
+              "garage": "092658",
+              "equipment": "092816",
+              "reminders": "092939",
+              "specs": "092946",
+              "history": "092953",
+              "photos": "093000",
+              "search": "093024",
+              "settings": "093051",
+              "backup": "093101",
+              "backup-schedule": "093104",
+          }
+          dest = Path("assets/serviceall/screens-2026")
+          dest.mkdir(parents=True, exist_ok=True)
+
+          with zipfile.ZipFile(incoming, "r") as zf:
+              entries = {Path(item.filename).name: item for item in zf.infolist() if not item.is_dir()}
+              found = {}
+              for label, stamp in screens.items():
+                  matching = [x for name,x in entries.items() if name.lower().endswith(".jpg") and
+                              name.startswith("Screenshot_") and ("_" + stamp + "_") in name]
+                  if len(matching) != 1:
+                      raise SystemExit(f"Expected exactly one genuine screenshot for {label} ({stamp}); found {len(matching)}")
+                  item = matching[0]
+                  if item.file_size > 15_000_000:
+                      raise SystemExit(f"Unexpectedly large screenshot: {item.filename}")
+                  found[label] = item
+              for label, item in found.items():
+                  image = Image.open(BytesIO(zf.read(item)))
+                  image = ImageOps.exif_transpose(image).convert("RGB")  # removes photo EXIF/location metadata
+                  image.thumbnail((780, 1560), Image.Resampling.LANCZOS)
+                  outfile = dest / (label + ".webp")
+                  image.save(outfile, format="WEBP", quality=77, method=6)
+                  print(f"{label}: {item.filename} -> {outfile} ({outfile.stat().st_size:,} bytes)")
+
+          # Change live page to the freshly uploaded app screenshots.
+          html_path = Path("serviceall.html")
+          html = html_path.read_text(encoding="utf-8")
+          oldprefix = "/assets/serviceall/screens/"
+          newprefix = "/assets/serviceall/screens-2026/"
+          old_to_new = {
+              "garage.webp": "garage.webp",
+              "cj-detail.webp": "equipment.webp",
+              "history.webp": "history.webp",
+              "specs.webp": "specs.webp",
+              "photos.webp": "photos.webp",
+              "settings.webp": "settings.webp",
+          }
+          for old, new in old_to_new.items():
+              html = html.replace(oldprefix + old, newprefix + new)
+
+          # The settings screenshot shows the Settings page. The dedicated backup panel
+          # and extra gallery tiles show the real, separate backup/retention controls.
+          html = html.replace(
+              '<div class="backup-preview"><img src="' + newprefix + "settings.webp" + '"',
+              '<div class="backup-preview"><img src="' + newprefix + "backup.webp" + '"'
+          )
+          html = html.replace('alt="Actual ServiceAll Settings screen with backup and restore controls"',
+                              'alt="Actual ServiceAll Backup & Data Integrity screen"')
+          html = html.replace('View the Settings screen <span', 'View the backup screens <span')
+          html = html.replace('>Settings & backup</figcaption>', '>Settings</figcaption>')
+          html = html.replace('alt="Actual ServiceAll app screenshot: Settings & backup"',
+                              'alt="Actual ServiceAll app screenshot: Settings"')
+
+          # Idempotent gallery expansion: don't append duplicates on later ZIP uploads.
+          if "serviceall-2026-extra-gallery" not in html:
+              gallery_start = html.index('<div class="screen-rail"')
+              gallery_end = html.index('</div>\n</div></section>', gallery_start)
+              extras = """
+              <!-- serviceall-2026-extra-gallery -->
+              <figure><a href="/assets/serviceall/screens-2026/reminders.webp" target="_blank" rel="noopener" aria-label="Open actual maintenance reminders screenshot"><img src="/assets/serviceall/screens-2026/reminders.webp" width="780" height="1524" loading="lazy" decoding="async" alt="ServiceAll equipment maintenance reminders screenshot"></a><figcaption>Maintenance reminders</figcaption></figure>
+              <figure><a href="/assets/serviceall/screens-2026/search.webp" target="_blank" rel="noopener" aria-label="Open actual search and history screenshot"><img src="/assets/serviceall/screens-2026/search.webp" width="780" height="1524" loading="lazy" decoding="async" alt="ServiceAll maintenance search screen"></a><figcaption>Search service records</figcaption></figure>
+              <figure><a href="/assets/serviceall/screens-2026/backup.webp" target="_blank" rel="noopener" aria-label="Open actual backup data integrity screenshot"><img src="/assets/serviceall/screens-2026/backup.webp" width="780" height="1524" loading="lazy" decoding="async" alt="ServiceAll backup data integrity screen"></a><figcaption>Backup &amp; data integrity</figcaption></figure>
+              <figure><a href="/assets/serviceall/screens-2026/backup-schedule.webp" target="_blank" rel="noopener" aria-label="Open actual automatic backup schedule screenshot"><img src="/assets/serviceall/screens-2026/backup-schedule.webp" width="780" height="1524" loading="lazy" decoding="async" alt="ServiceAll automatic backup schedule and retention screen"></a><figcaption>Backup schedule</figcaption></figure>
+              """
+              html = html[:gallery_end] + extras + html[gallery_end:]
+
+          html_path.write_text(html, encoding="utf-8")
+          print("Finished: optimized 10 authentic app screens, rewrote feature-story images, and expanded the screenshot gallery.")
+          PY
+
+      - name: Commit site images
+        shell: bash
+        run: |
+          if [ ! -d assets/serviceall/screens-2026 ]; then
+            echo "No incoming screenshot ZIP; nothing to publish."
+            exit 0
+          fi
+          git config user.name "Brown Family Apps Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add serviceall.html assets/serviceall/screens-2026
+          # Original 9MB archive need not remain on the published website.
+          if [ -f "assets/serviceall/incoming/Marketing Photos.zip" ]; then
+            git rm "assets/serviceall/incoming/Marketing Photos.zip"
+          fi
+          if git diff --cached --quiet; then
+            echo "Screenshots already up to date."
+            exit 0
+          fi
+          git commit -m "Publish current genuine ServiceAll screenshots in feature showcase"
+          git push
+
+      - name: Request GitHub Pages refresh when supported
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" ||
+            echo "Pages build request unavailable; trigger a Pages rebuild if the new images do not appear."
