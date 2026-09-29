@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "assets/serviceall/incoming/Marketing Photos.zip"
+      - "assets/serviceall/incoming/ServiceAll_Website_Images_Optimized.zip"
       - ".github/workflows/serviceall-refresh-assets.yml"
   workflow_dispatch:
 
@@ -41,45 +42,75 @@ jobs:
           import zipfile
 
           incoming = Path("assets/serviceall/incoming/Marketing Photos.zip")
-          if not incoming.is_file():
-              print("No incoming Marketing Photos.zip. Upload the ZIP to assets/serviceall/incoming/ to activate this job.")
+          optimized = Path("assets/serviceall/incoming/ServiceAll_Website_Images_Optimized.zip")
+          if not optimized.is_file() and not incoming.is_file():
+              print("No input ZIP. Upload a screenshot ZIP to assets/serviceall/incoming/.")
               raise SystemExit(0)
 
-          # Only take specifically selected, real app screenshots from this archive.
-          screens = {
-              "garage": "092658",
-              "equipment": "092816",
-              "reminders": "092939",
-              "specs": "092946",
-              "history": "092953",
-              "photos": "093000",
-              "search": "093024",
-              "settings": "093051",
-              "backup": "093101",
-              "backup-schedule": "093104",
-          }
           dest = Path("assets/serviceall/screens-2026")
           dest.mkdir(parents=True, exist_ok=True)
+          labels = ("garage", "equipment", "reminders", "specs", "history", "photos",
+                    "search", "settings", "backup", "backup-schedule")
 
-          with zipfile.ZipFile(incoming, "r") as zf:
-              entries = {Path(item.filename).name: item for item in zf.infolist() if not item.is_dir()}
-              found = {}
-              for label, stamp in screens.items():
-                  matching = [x for name,x in entries.items() if name.lower().endswith(".jpg") and
-                              name.startswith("Screenshot_") and ("_" + stamp + "_") in name]
-                  if len(matching) != 1:
-                      raise SystemExit(f"Expected exactly one genuine screenshot for {label} ({stamp}); found {len(matching)}")
-                  item = matching[0]
-                  if item.file_size > 15_000_000:
-                      raise SystemExit(f"Unexpectedly large screenshot: {item.filename}")
-                  found[label] = item
-              for label, item in found.items():
-                  image = Image.open(BytesIO(zf.read(item)))
-                  image = ImageOps.exif_transpose(image).convert("RGB")  # removes photo EXIF/location metadata
-                  image.thumbnail((780, 1560), Image.Resampling.LANCZOS)
-                  outfile = dest / (label + ".webp")
-                  image.save(outfile, format="WEBP", quality=77, method=6)
-                  print(f"{label}: {item.filename} -> {outfile} ({outfile.stat().st_size:,} bytes)")
+          if optimized.is_file():
+              # The uploaded optimized archive contains 10 actual app screenshots
+              # with fully qualified paths. Validate every entry before publishing.
+              with zipfile.ZipFile(optimized, "r") as zf:
+                  selected = {}
+                  for label in labels:
+                      name = "assets/serviceall/screens-2026/" + label + ".webp"
+                      if name not in zf.namelist():
+                          raise SystemExit("Missing screenshot: " + name)
+                      item = zf.getinfo(name)
+                      if item.file_size < 1000 or item.file_size > 2_000_000:
+                          raise SystemExit("Unexpected size: " + name)
+                      data = zf.read(item)
+                      try:
+                          im = Image.open(BytesIO(data))
+                          im.verify()
+                      except (OSError, ValueError) as error:
+                          raise SystemExit(f"Invalid WebP {name}: {error}")
+                      im = Image.open(BytesIO(data))
+                      if im.format != "WEBP" or im.width < 300 or im.height < 500:
+                          raise SystemExit("Unexpected screenshot format or dimensions: " + name)
+                      selected[label] = data
+                  for label, data in selected.items():
+                      out = dest / (label + ".webp")
+                      out.write_bytes(data)
+                      print(f"Published {label}: {len(data):,} bytes")
+          else:
+              # Also support the original JPG archive for future screenshots.
+              screens = {
+                  "garage": "092658",
+                  "equipment": "092816",
+                  "reminders": "092939",
+                  "specs": "092946",
+                  "history": "092953",
+                  "photos": "093000",
+                  "search": "093024",
+                  "settings": "093051",
+                  "backup": "093101",
+                  "backup-schedule": "093104",
+              }
+              with zipfile.ZipFile(incoming, "r") as zf:
+                  entries = {Path(item.filename).name: item for item in zf.infolist() if not item.is_dir()}
+                  found = {}
+                  for label, stamp in screens.items():
+                      matching = [x for name,x in entries.items() if name.lower().endswith(".jpg") and
+                                  name.startswith("Screenshot_") and ("_" + stamp + "_") in name]
+                      if len(matching) != 1:
+                          raise SystemExit(f"Expected exactly one genuine screenshot for {label} ({stamp}); found {len(matching)}")
+                      item = matching[0]
+                      if item.file_size > 15_000_000:
+                          raise SystemExit(f"Unexpectedly large screenshot: {item.filename}")
+                      found[label] = item
+                  for label, item in found.items():
+                      image = Image.open(BytesIO(zf.read(item)))
+                      image = ImageOps.exif_transpose(image).convert("RGB")
+                      image.thumbnail((780, 1560), Image.Resampling.LANCZOS)
+                      outfile = dest / (label + ".webp")
+                      image.save(outfile, format="WEBP", quality=77, method=6)
+                      print(f"{label}: {item.filename} -> {outfile} ({outfile.stat().st_size:,} bytes)")
 
           # Change live page to the freshly uploaded app screenshots.
           html_path = Path("serviceall.html")
@@ -140,6 +171,9 @@ jobs:
           # Original 9MB archive need not remain on the published website.
           if [ -f "assets/serviceall/incoming/Marketing Photos.zip" ]; then
             git rm "assets/serviceall/incoming/Marketing Photos.zip"
+          fi
+          if [ -f "assets/serviceall/incoming/ServiceAll_Website_Images_Optimized.zip" ]; then
+            git rm "assets/serviceall/incoming/ServiceAll_Website_Images_Optimized.zip"
           fi
           if git diff --cached --quiet; then
             echo "Screenshots already up to date."
