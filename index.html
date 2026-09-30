@@ -22,7 +22,10 @@
 
     /* Homepage portfolio window: use real app imagery without cropping titles. */
     .hero-card-content{gap:7px;padding:17px 20px}
-    .hero-card .mini-app{padding:8px 12px;min-height:54px}
+    .hero-card .mini-app{padding:8px 12px;min-height:54px;text-decoration:none;color:inherit;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+    .hero-card .mini-app:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    .hero-card .mini-app:focus-visible{outline:3px solid #ffae13;outline-offset:2px}
+    article[id]{scroll-margin-top:90px}
     .hero-card .mini-app img{width:44px;height:44px;object-fit:contain}
     .hero-card .mini-app strong{font-size:.93rem}
     .hero-card .mini-app small{font-size:.74rem}
@@ -186,15 +189,15 @@
         <div class="hero-actions"><a class="button primary" href="#apps">Explore our apps</a><a class="button secondary" href="/privacy.html">How we handle data</a></div>
         <div class="trust-row" aria-label="Brown Family Apps principles"><span>No personal-data selling</span><span>Purpose-limited collection</span><span>Built & supported by a small studio</span></div>
       </div>
-      <div class="hero-card" aria-hidden="true">
+      <div class="hero-card" aria-label="Jump to an app">
         <div class="window-top"><span></span><span></span><span></span></div>
         <div class="hero-card-content">
-          <div class="mini-app eggsy-mini"><img src="/eggsy/images/eggsy-app-icon.webp" alt="" width="44" height="44" decoding="async"><div><strong>Eggsy</strong><small>Backyard flock tracking</small></div></div>
-          <div class="mini-app jobsnap-mini"><img width="44" height="44" decoding="async" class="jobsnap-mini-logo" src="/assets/apps/jobsnap-camera.webp" alt=""><div><strong>JobSnapApp</strong><small>Job-site organization</small></div></div>
-          <div class="mini-app tictactoe-mini"><img src="/assets/favicons/tictactoe.ico" alt="" width="44" height="44" decoding="async"><div><strong>Tic-Tac-Toe</strong><small>Classic two-player game</small></div></div>
-          <div class="mini-app serviceall-mini"><img src="/serviceall-icon.webp" alt="" width="44" height="44" decoding="async"><div><strong>ServiceAll</strong><small>Keep your stuff running</small></div></div>
-          <div class="mini-app homesteader-mini"><img width="44" height="44" decoding="async" class="mini-screen homestead-thumb" src="/assets/apps/homesteader-icon.webp" alt=""><div><strong>Homesteader</strong><small>Homestead records</small></div></div>
-          <div class="mini-app void-mini"><img src="/assets/apps/void-ascendant-icon.webp" alt="" width="44" height="44" decoding="async"><div><strong>Void Ascendant</strong><small>Idle space progression</small></div></div>
+          <a class="mini-app eggsy-mini" href="#eggsy"><img src="/eggsy/images/eggsy-app-icon.webp" alt="" width="44" height="44" decoding="async"><div><strong>Eggsy</strong><small>Backyard flock tracking</small></div></a>
+          <a class="mini-app jobsnap-mini" href="#jobsnapapp"><img width="44" height="44" decoding="async" class="jobsnap-mini-logo" src="/assets/apps/jobsnap-camera.webp" alt=""><div><strong>JobSnapApp</strong><small>Job-site organization</small></div></a>
+          <a class="mini-app tictactoe-mini" href="#tictactoe"><img src="/assets/favicons/tictactoe.ico" alt="" width="44" height="44" decoding="async"><div><strong>Tic-Tac-Toe</strong><small>Classic two-player game</small></div></a>
+          <a class="mini-app serviceall-mini" href="#serviceall"><img src="/serviceall-icon.webp" alt="" width="44" height="44" decoding="async"><div><strong>ServiceAll</strong><small>Keep your stuff running</small></div></a>
+          <a class="mini-app homesteader-mini" href="#homesteader"><img width="44" height="44" decoding="async" class="mini-screen homestead-thumb" src="/assets/apps/homesteader-icon.webp" alt=""><div><strong>Homesteader</strong><small>Homestead records</small></div></a>
+          <a class="mini-app void-mini" href="#void-ascendant"><img src="/assets/apps/void-ascendant-icon.webp" alt="" width="44" height="44" decoding="async"><div><strong>Void Ascendant</strong><small>Idle space progression</small></div></a>
           <div class="studio-note portfolio-note"><span>3+3</span><p>Three in production · three in testing</p></div>
         </div>
       </div>
@@ -212,7 +215,7 @@
         <div class="product-grid">
           <div class="portfolio-group"><div><span class="group-label">In production</span><h3>Available now</h3></div><p>Finished products currently available to users, from practical work and flock tools to a simple family game.</p></div>
 
-          <article class="product-card eggsy-card">
+          <article class="product-card eggsy-card" id="eggsy">
             <div class="product-copy">
               <div class="product-topline"><span class="status live">Available now</span><span>Android</span></div>
               <div class="product-title-row"><img src="/eggsy/images/eggsy-app-icon.webp" alt="Eggsy app icon"><div><h3>Eggsy</h3><p class="product-tagline">The fun, simple flock tracker.</p></div></div>
@@ -224,7 +227,7 @@
             <a class="product-visual" href="/eggsy/" aria-label="View Eggsy website"><img loading="lazy" decoding="async" src="/eggsy/images/eggsy-banner.webp" alt="Eggsy promotional graphic with the Eggsy name and app screens"></a>
           </article>
 
-          <article class="product-card jobsnap-card">
+          <article class="product-card jobsnap-card" id="jobsnapapp">
             <div class="product-copy">
               <div class="product-topline"><span class="status live">Available now</span><span>Job & field workflow</span></div>
               <div class="product-title-row"><img loading="lazy" decoding="async" class="jobsnap-brand-logo" src="/assets/apps/jobsnap-camera.webp" alt="JobSnapApp camera logo"><div><h3>JobSnapApp</h3><p class="product-tagline">Keep job-site details organized.</p></div></div>
@@ -236,7 +239,7 @@
             <a class="jobsnap-visual jobsnap-real-visual" href="https://www.jobsnapapp.com" target="_blank" rel="noopener" aria-label="Visit JobSnapApp.com"><img decoding="async" class="jobsnap-hero-image" src="https://jobsnapapp.com/images/JobSnapApp_Hero.png" alt="JobSnapApp interface shown on a mobile device" loading="lazy"></a>
           </article>
 
-          <article class="product-card tictactoe-card">
+          <article class="product-card tictactoe-card" id="tictactoe">
             <div class="product-copy">
               <div class="product-topline"><span class="status live">Available now</span><span>Two-player game</span></div>
               <div class="product-title-row"><img loading="lazy" decoding="async" src="/assets/favicons/tictactoe.ico" alt="Tic-Tac-Toe app icon"><div><h3>Tic-Tac-Toe</h3><p class="product-tagline">A classic game for quick shared moments.</p></div></div>
@@ -249,7 +252,7 @@
 
           <div class="portfolio-group testing"><div><span class="group-label">In testing</span><h3>Coming next</h3></div><p>Active projects being refined before production release. Features, screens, pricing, and timing can still change during testing.</p></div>
 
-          <article class="product-card serviceall-card">
+          <article class="product-card serviceall-card" id="serviceall">
             <div class="product-copy">
               <div class="product-topline"><span class="status building">In testing</span><span>Vehicles · Equipment · Tools</span></div>
               <div class="product-title-row"><img loading="lazy" decoding="async" src="/serviceall-icon.webp" alt="ServiceAll app icon"><div><h3>ServiceAll: My Garage</h3><p class="product-tagline">Keep Your Stuff Running.</p></div></div>
@@ -261,7 +264,7 @@
             <a class="product-visual serviceall-visual" href="/serviceall.html" aria-label="Explore ServiceAll My Garage"><img class="serviceall-hero-image" src="/assets/serviceall/feature-banner.webp" width="1440" height="703" alt="ServiceAll: All Your Equipment, One Garage. Maintenance, history and photo features displayed using the app screens" loading="lazy" decoding="async"></a>
           </article>
 
-          <article class="product-card homesteader-card">
+          <article class="product-card homesteader-card" id="homesteader">
             <div class="product-copy">
               <div class="product-topline"><span class="status building">In testing</span><span>Homestead records</span></div>
               <div class="product-title-row"><img loading="lazy" decoding="async" src="/assets/apps/homesteader-icon.webp" alt="Homesteader app icon"><div><h3>Homesteader</h3><p class="product-tagline">One place for the records behind the homestead.</p></div></div>
@@ -272,7 +275,7 @@
             <a class="product-visual homesteader-screen-visual" href="/homesteader.html" aria-label="View Homesteader"><img loading="lazy" decoding="async" class="homesteader-screen" src="/assets/apps/homesteader-animals.webp" alt="Homesteader Animals screen showing animal groups, individual animals, and navigation"></a>
           </article>
 
-          <article class="product-card void-card">
+          <article class="product-card void-card" id="void-ascendant">
             <div class="product-copy">
               <div class="product-topline"><span class="status building">In testing</span><span>Idle · Incremental · Space</span></div>
               <div class="product-title-row"><img loading="lazy" decoding="async" src="/assets/apps/void-ascendant-icon.webp" alt="Void Ascendant app icon"><div><h3>Void Ascendant</h3><p class="product-tagline">Build. Upgrade. Ascend.</p></div></div>
